@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    block:
+\*------------------------------------*/
+.readmore {
+    transform: rotate3d(0,0,0);
+}
+
+.readmore__btn {
+    font-weight: 500;
+    transition: color 200ms ease-out;
+    &:hover, &:focus {
+        outline: none;
+        color: rgba(black,.8);
+    }
+}
+
+.readmore__content {
+    height: 0;
+    overflow: hidden;
+    transition: height 500ms ease-out;
+    position: relative;
+    //&::after {
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    width: 100%;
+    //    right: 0;
+    //    height: 100%;
+    //    content: '';
+    //    box-shadow: 0 -20px 30px -20px lightgray inset;
+    //    transition: box-shadow 100ms ease-out 300ms;
+    //}
+}
+
+
+
+/*------------------------------------*\
+    states
+\*------------------------------------*/
+
+//.readmore.is-open {
+//    .readmore__content::after {
+//        box-shadow: none;
+//        transition: box-shadow 400ms ease-in-out 50ms;
+//    }
+//}
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
+
+

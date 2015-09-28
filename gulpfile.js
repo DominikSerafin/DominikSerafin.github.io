@@ -180,11 +180,8 @@ gulp.task('reload', browserSync.reload);
 gulp.task('watch', function() {
 
   //build
-  gulp.watch('src/static/css-source/**/*',       ['cssbuild']);
-  gulp.watch('src/static/js-source/**/*.js',     ['jsbuild']);
-  //reload
-  //gulp.watch('src/templates/**/*.html',          ['reload']);
-  //gulp.watch('src/static/js/**/*',               ['reload']);
+  gulp.watch('static/css-source/**/*',       ['cssbuild']);
+  gulp.watch('static/js-source/**/*.js',     ['jsbuild']);
 
 });
 

@@ -11,13 +11,19 @@
 }
 
 
-.layout__left {
-    width: 50%;
+.layout__left,
+.layout__right
+{
     display: inline-block;
-
+    width: 50%;
+    vertical-align: top;
 }
 
 .layout__main {
+
+    section {
+        margin-bottom: 50px;
+    }
 
     h2 {
         margin-top: 60px;
