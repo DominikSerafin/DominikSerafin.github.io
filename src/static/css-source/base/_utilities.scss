@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    mixins
+\*------------------------------------*/
+
+    @mixin clearfix {
+        zoom: 1;
+        &::before,
+        &::after
+        {
+            content: "";
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+    }
+
+    @mixin no-select {
+      user-select: none;
+    }
+
+
+/*------------------------------------*\
+    utilities
+\*------------------------------------*/
+
+    .u-clearfix {
+        zoom: 1;
+        &::before,
+        &::after {
+            content: "";
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+    }
+
+    .u-no-select {
+        user-select: none;
+    }

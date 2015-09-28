@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*! Copyright 2015 to eternity: Dominik Serafin | github.com/DominikSerafin */
+
+
+/*------------------------------------*\
+    base
+\*------------------------------------*/
+
+    @import "base/_normalize-sanitize.scss"; // github.com/DominikSerafin/normalize-sanitize
+    @import "base/_utilities.scss";          // sass useful mixins and class based utilities
+    @import "base/_style.scss";              // default elements styles
+    @import "styles/_layout.scss";           // layout styles
+
+
+/*------------------------------------*\
+    blocks
+\*------------------------------------*/
+
+    //@import "blocks/_blank.scss"; // blank file for copying
+
+
+/*------------------------------------*\
+    other
+\*------------------------------------*/
+
+    //@import "_z-index.scss";      // z-index catalog
+    // @import "_shame.scss";       // http://csswizardry.com/2013/04/shame-css/
+
