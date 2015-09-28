@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    block:
+\*------------------------------------*/
+
+.project.project {
+    margin: 20px 0 0 0;
+    display: block;
+    width: 100%;
+    background-color: rgba(black,.03);
+    border-radius: 3px;
+    padding: 20px 200px 20px 25px;
+    background-size: contain;
+    background-position: 150% 50%;
+}
+
+.project__title.project__title {
+    margin: 0;
+
+}
+
+.project__desc.project__desc {
+    margin: 5px 0 0 0;
+}
+
+
+/*------------------------------------*\
+    states
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
+
+
