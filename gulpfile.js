@@ -53,7 +53,7 @@ var sourcemaps    = require('gulp-sourcemaps');
 
 var serverconfig = {
   server: {
-    baseDir: 'src',
+    baseDir: './',
     directory: true
   },
   open: false,
@@ -63,15 +63,15 @@ var serverconfig = {
 };
 
 var js = {
-  src: ['src/static/js-source/index.js'],
-  dest: 'src/static/js',
+  src: ['static/js-source/index.js'],
+  dest: 'static/js',
   name: 'bundle.js'
 };
 
 var css = {
-  base: 'src/static/css-source',
-  src: ['src/static/css-source/global.scss'],
-  dest: 'src/static/css'
+  base: 'static/css-source',
+  src: ['static/css-source/global.scss'],
+  dest: 'static/css'
 }
 
 var sassconfig = {
