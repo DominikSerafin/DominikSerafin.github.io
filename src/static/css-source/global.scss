@@ -6,17 +6,20 @@
     base
 \*------------------------------------*/
 
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
     @import "base/_normalize-sanitize.scss"; // github.com/DominikSerafin/normalize-sanitize
     @import "base/_utilities.scss";          // sass useful mixins and class based utilities
     @import "base/_style.scss";              // default elements styles
-    @import "styles/_layout.scss";           // layout styles
+    @import "base/_social-icons.scss";
 
 
 /*------------------------------------*\
-    blocks
+    styles
 \*------------------------------------*/
 
-    //@import "blocks/_blank.scss"; // blank file for copying
+    @import "styles/_layout.scss";
+    @import "styles/_header.scss";
+    @import "styles/_footer.scss";
 
 
 /*------------------------------------*\

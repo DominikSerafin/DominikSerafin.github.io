@@ -1,3 +1,40 @@
 /*------------------------------------*\
     layout
 \*------------------------------------*/
+
+.layout__wrapper {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+
+.layout__left {
+    width: 50%;
+    display: inline-block;
+
+}
+
+.layout__main {
+
+    h2 {
+        margin-top: 60px;
+        font-size: 23px;
+        color: rgba(black,.8);
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-top: 40px;
+        color: rgba(black,.7);
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 15px;
+        color: rgba(black,.6);
+    }
+
+}

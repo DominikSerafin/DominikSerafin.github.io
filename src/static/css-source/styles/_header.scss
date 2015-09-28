@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    block:
+\*------------------------------------*/
+.header {
+    margin: 80px auto 0 auto;
+}
+
+.header__title {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(black,.8);
+}
+
+.header__under-title {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.header__social {
+    display: inline-block;
+    font-size: 19px;
+    line-height: 20px;
+    color: rgba(black,.5);
+    vertical-align: middle;
+    transition: color 200ms ease-in-out;
+    &:hover {
+        color: rgba(black,.7);
+    }
+    margin: 0 5px;
+
+    &.social-dribbble {
+        font-size: 18px;
+    }
+    &.social-behance {
+        font-size: 21px;
+    }
+
+
+    &.social-twitter:hover {
+        color: #55acee;
+    }
+
+    &.social-dribbble:hover {
+        color: #ea4c89;
+    }
+
+    &.social-behance:hover {
+        color: #1769ff;
+    }
+
+    &.social-github:hover {
+        color: #4183c4;
+    }
+
+    &.social-linkedin-1:hover {
+        color: #0077b5;
+    }
+
+}
+
+
+
+/*------------------------------------*\
+    states
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
+
+

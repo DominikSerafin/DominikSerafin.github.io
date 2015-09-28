@@ -69,6 +69,7 @@ var js = {
 };
 
 var css = {
+  base: 'src/static/css-source',
   src: ['src/static/css-source/global.scss'],
   dest: 'src/static/css'
 }
@@ -138,7 +139,7 @@ function bundle() {
 gulp.task('cssbuild', function() {
 
   //src
-  return gulp.src(css.src)
+  return gulp.src(css.src, {base: css.base})
 
   //plumber
   .pipe(plumber({errorHandler: function(error) {
@@ -149,7 +150,7 @@ gulp.task('cssbuild', function() {
     this.emit('end');
   }}))
 
-  .pipe(sourcemaps.init({loadMaps: true}))
+  .pipe(sourcemaps.init())
     .pipe(sass(sassconfig))
     .pipe(autoprefixer(autoprefixerconfig))
   .pipe(sourcemaps.write('./'))
