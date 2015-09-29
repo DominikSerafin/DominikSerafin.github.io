@@ -2,14 +2,14 @@
     block:
 \*------------------------------------*/
 .header {
-    margin: 80px auto 0 auto;
+    margin: 90px auto 0 auto;
 }
 
 .header__title {
     text-align: center;
     display: block;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: rgba(black,.8);
 }
@@ -26,7 +26,7 @@
     line-height: 20px;
     color: rgba(black,.5);
     vertical-align: middle;
-    transition: color 200ms ease-in-out;
+    transition: color 200ms ease-out;
     &:hover {
         color: rgba(black,.7);
     }
