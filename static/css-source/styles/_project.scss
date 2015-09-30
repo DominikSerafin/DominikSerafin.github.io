@@ -2,19 +2,35 @@
     block:
 \*------------------------------------*/
 
+$project-bg-color: rgb(245,245,245);
+
+
 .project.project {
     margin: 0 0 30px 0;
     display: block;
     width: 100%;
-    background-color: #F9F9F9;
+    background-color: $project-bg-color;
     border-radius: 3px;
-    padding: 20px 200px 20px 25px;
     background-size: 200px;
-    background-position: 120% 50%;
+    background-position: 120% 20%;
     position: relative;
     overflow: hidden;
+    padding-bottom: 5px;
     //border: 1px solid rgb(240,240,240);
 }
+
+
+.project--joinapp {
+    background-size: 20% 50%;
+    background-position: 120% 10%;
+}
+
+.project__foreground {
+    position: relative;
+    z-index: 2;
+    padding: 20px 200px 10px 25px;
+}
+
 
 .project__title.project__title {
     margin: 0;
@@ -26,28 +42,88 @@
     margin-top: 5px;
 }
 
+
+.project__link-wrapper {
+    //background-color: $project-bg-color;
+    display: block;
+    //border-top: 1px solid rgba(black,.04);
+    padding: 2px 0 5px 25px;
+    margin-right: 200px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-image: linear-gradient( to left, transparent, rgba(253,253,253,.8) 50% );
+    }
+}
+
 .project__link.project__link {
-    color: rgba(black,.6);
+
+    position: relative;
+    z-index: 1;
+
+    color: rgba(black,.5);
     font-size: 16px;
     margin: 0;
     display: inline-block;
     margin-top: 5px;
-
-
-
-    text-shadow: -1px -1px 0 #F6F6F6,
-                  1px  1px 0 #F6F6F6,
-                  1px -1px 0 #F6F6F6,
-                 -1px  1px 0 #F6F6F6;
+    text-shadow: none;
     &::before {
-        bottom: 3px;
+        display: none;
     }
+
+    transition: color 200ms ease-out;
+
+    &:hover {
+        color: rgba(black,.7);
+    }
+
+    //text-shadow: -1px -1px 0 #F6F6F6,
+    //              1px  1px 0 #F6F6F6,
+    //              1px -1px 0 #F6F6F6,
+    //             -1px  1px 0 #F6F6F6;
+    //&::before {
+    //    bottom: 3px;
+    //}
 }
 
-.project__foreground {
-    position: relative;
-    z-index: 2;
+.project__link--coming-soon.project__link--coming-soon {
+
+    &::after {
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        content: "Coming Soon™";
+        color: white;
+        width: 110px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 2px;
+        padding: 3px 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms ease-out;
+    }
+
+    color: rgba(black,.3);
+
+    &:hover {
+        color: rgba(black,.3);
+
+        &::after {
+            opacity: .5;
+        }
+    }
+
 }
+
 
 .project__background {
     position: absolute;
@@ -67,8 +143,27 @@
 
 
 
+
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+@media screen and (max-width: 500px) {
 
+
+    .project {
+        background-image: none !important;
+    }
+
+    .project__foreground {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .project__link-wrapper {
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+
+
+}
 

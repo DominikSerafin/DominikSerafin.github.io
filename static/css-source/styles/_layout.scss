@@ -20,20 +20,21 @@
     padding: 0 20px;
 }
 
+.layout__left {
+    padding-right: 30px;
+}
+.layout__right {
+    padding-left: 30px;
+}
+
 .layout__main {
 
-    margin-top: 10px;
-
-    section {
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
 
     h2 {
         margin-top: 70px;
-        margin-bottom: 20px;
-        font-size: 21px;
-        color: rgba(black,.8);
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: rgba(black,.75);
     }
 
     h3 {
@@ -76,6 +77,15 @@
 
 }
 
+.layout__whole {
+    display: block;
+    padding: 0 20px;
+}
+
+.layout__whole--center {
+    text-align: center;
+}
+
 
 /*------------------------------------*\
     media-queries
@@ -83,6 +93,8 @@
 @media screen and (max-width: 1000px) {
 
 
+
+    .layout__whole,
     .layout__left,
     .layout__right
     {
