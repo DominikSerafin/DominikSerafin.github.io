@@ -15,7 +15,7 @@ $project-bg-color: rgb(245,245,245);
     background-position: 120% 20%;
     position: relative;
     overflow: hidden;
-    padding-bottom: 5px;
+    padding-bottom: 1px;
     //border: 1px solid rgb(240,240,240);
 }
 
@@ -29,37 +29,45 @@ $project-bg-color: rgb(245,245,245);
     position: relative;
     z-index: 2;
     padding: 20px 200px 10px 25px;
+    overflow: hidden;
 }
 
 
 .project__title.project__title {
     margin: 0;
+    position: relative;
+    z-index: 3;
 
 }
 
 .project__desc.project__desc {
     margin: 0;
     margin-top: 5px;
+    position: relative;
+    z-index: 4;
 }
 
 
 .project__link-wrapper {
     //background-color: $project-bg-color;
+    background-color: rgba(white,.5);
     display: block;
     //border-top: 1px solid rgba(black,.04);
     padding: 2px 0 5px 25px;
-    margin-right: 200px;
+    //margin-right: 200px;
     position: relative;
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: block;
-        height: 1px;
-        background-image: linear-gradient( to left, transparent, rgba(253,253,253,.8) 50% );
-    }
+    z-index: 1;
+    margin-top: 1px;
+    //&::before {
+    //    content: '';
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    width: 100%;
+    //    display: block;
+    //    height: 1px;
+    //    background-image: linear-gradient( to left, transparent, rgba(253,253,253,.8) 50% );
+    //}
 }
 
 .project__link.project__link {
@@ -125,28 +133,94 @@ $project-bg-color: rgb(245,245,245);
 }
 
 
+
+
+
+.project__image {
+    position: absolute;
+    z-index: 2;
+    height: auto;
+    width: auto;
+}
 .project__background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
+    z-index: 0;
     height: auto;
-    filter: blur(10px);
-    z-index: 1;
-    opacity: .1;
+    width: auto;
 }
+
 
 
 /*------------------------------------*\
     states
 \*------------------------------------*/
 
+.project--enboard {
 
+    .project__image {
+        bottom: 0;
+        right: -40px;
+        width: 220px;
+        box-shadow: 0 5px 20px 0 rgba(black,.2);
+    }
+
+    .project__background {
+        top: -10%;
+        left: -25%;
+        width: 200%;
+        filter: blur(10px);
+        opacity: .1;
+    }
+}
+
+
+.project--joinapp {
+
+    .project__image {
+        top: 20px;
+        right: -10px;
+        height: 200px;
+        box-shadow: 0 25px 20px 0 rgba(black,.2), 15px 0px 25px 0 rgba(black,.15);
+    }
+
+    .project__background {
+        top: -100%;
+        left: -45%;
+        height: 500%;
+        filter: blur(4px);
+        opacity: .1;
+    }
+
+
+
+}
 
 
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+    .project--enboard {
+
+        .project__image {
+            top: 20px;
+            bottom: none;
+        }
+
+    }
+
+
+}
+
+
 @media screen and (max-width: 500px) {
 
 
@@ -161,7 +235,11 @@ $project-bg-color: rgb(245,245,245);
 
     .project__link-wrapper {
         padding-left: 20px;
-        margin-right: 20px;
+        margin-right: 0;
+    }
+
+    .project__image {
+        display: none;
     }
 
 
