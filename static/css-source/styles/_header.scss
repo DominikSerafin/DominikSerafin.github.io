@@ -21,15 +21,18 @@
 }
 
 .header__social {
+    position: relative;
     display: inline-block;
     font-size: 19px;
     line-height: 20px;
     color: rgba(black,.5);
     vertical-align: middle;
     transition: color 200ms ease-out;
+
     &:hover {
         color: rgba(black,.7);
     }
+
     margin: 0 5px;
 
     &.social-dribbble {
@@ -59,6 +62,38 @@
     &.social-linkedin-1:hover {
         color: #0077b5;
     }
+
+
+
+    /*
+    &::after {
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #bbb;
+        content: attr(title);
+        color: white;
+        width: 500px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 2px;
+        padding: 5px 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms ease-out;
+    }
+
+
+    &:hover {
+        color: rgba(black,.3);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+    */
+
 
 }
 
