@@ -63,15 +63,15 @@ var serverconfig = {
 };
 
 var js = {
-  src: ['static/js-source/index.js'],
-  dest: 'static/js',
+  src: ['./static/js-source/index.js'],
+  dest: './static/js',
   name: 'bundle.js'
 };
 
 var css = {
-  base: 'static/css-source',
-  src: ['static/css-source/global.scss'],
-  dest: 'static/css'
+  base: './static/css-source',
+  src: ['./static/css-source/global.scss'],
+  dest: './static/css'
 }
 
 var sassconfig = {
@@ -180,7 +180,7 @@ gulp.task('reload', browserSync.reload);
 gulp.task('watch', function() {
 
   //build
-  gulp.watch('static/css-source/**/*',       ['cssbuild']);
+  gulp.watch('static/css-source/**/*.scss',  ['cssbuild']);
   gulp.watch('static/js-source/**/*.js',     ['jsbuild']);
 
 });

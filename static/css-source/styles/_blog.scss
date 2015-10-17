@@ -1,0 +1,159 @@
+/*------------------------------------*\
+    variables
+\*------------------------------------*/
+
+$font-heading: "Karla", sans-serif;
+
+
+$font-body: "Karla", sans-serif;
+$size-body: 20px;
+$line-height-body: 1.4;
+$color-body: rgb(50,50,50);
+
+
+
+@mixin link {
+
+    $a-color: black;
+    $underline-color: #222;
+    $outline-color: white;
+
+    color: black;
+    font-weight: 600;
+    background-image: linear-gradient(to bottom,$underline-color 75%,$underline-color 75%);
+    text-shadow: -1px -1px 0 $outline-color,1px -1px 0 $outline-color,-1px 1px 0 $outline-color,1px 1px 0 $outline-color;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 99.9%;
+    text-decoration: none;
+
+}
+
+
+
+
+/*------------------------------------*\
+    styles
+\*------------------------------------*/
+
+.blog {
+    //background-color: rgb(248,248,248);
+}
+
+
+.blog__normal-flow {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blog__widescreen-flow {
+    margin: 80px 0;
+}
+
+
+
+.blog__content {
+
+    h1 {
+        font-weight: 700;
+        font-family: $font-heading;
+        font-size: 30px;
+        margin: 100px 0 20px 0;
+
+    }
+
+    h2 {
+        font-weight: 700;
+        font-family: $font-heading;
+        font-size: 25px;
+        margin: 30px 0 20px 0;
+
+    }
+
+
+    h3,
+    h4,
+    h5,
+    h6
+    {
+        font-weight: 700;
+        font-family: $font-heading;
+        font-size: 20px;
+        margin: 30px 0 20px 0;
+
+    }
+
+    p {
+
+        a { @include link; }
+
+
+        font-family: $font-body;
+        font-size: $size-body;
+        line-height: $line-height-body;
+        color: $color-body;
+        margin: 20px 0 20px 0;
+
+
+    }
+
+
+    img {
+        max-width: 100%;
+    }
+
+
+
+    aside {
+
+        a { @include link; }
+
+
+        font-family: $font-body;
+        position: absolute;
+        left: -280px;
+        font-size: 16px;
+        width: 250px;
+        text-align: right;
+        margin-top: 20px;
+        opacity: .5;
+
+        //transition: opacity 300ms ease-in-out;
+        //&:hover {
+        //opacity: .8;
+        //}
+
+    }
+
+
+    code {
+        font-family: "Ubuntu Mono", monospace, monospace;
+        background-color: rgb(240,240,240);
+        padding: 0 5px;
+        border-radius: 2px;
+        font-size: $size-body;
+    }
+
+
+    li {
+        @extend p;
+    }
+
+}
+
+
+
+
+/*------------------------------------*\
+    states
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
+
+
