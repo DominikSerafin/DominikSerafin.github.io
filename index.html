@@ -59,7 +59,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Fonts -->
-    <!-- *google.com/fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700,500,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Karla:400,700italic,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- Scripts preload -->
     <!-- <script src="" type="text/javascript"></script> -->
@@ -71,45 +73,74 @@
 
 <body>
 
-    <div class="layout__wrapper">
+
+    <div id="smooth-state">
 
 
         <header class="header">
-            <h1 class="header__title">Dominik Serafin</h1>
-            <div class="header__under-title">
 
-                <a href="https://twitter.com/SerafinDominik" class="header__social social-twitter" target="_blank"
-                title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
+            <div>
 
-                <a href="https://dribbble.com/DominikSerafin" class="header__social social-dribbble" target="_blank"
-                title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
+                <a class="header__title" href="/index.html">Dominik Serafin</a>
 
-                <a href="https://www.behance.net/dominikserafin" class="header__social social-behance" target="_blank"
-                title="Here I upload complete projects showcases.">&nbsp;</a>
 
-                <a href="https://github.com/DominikSerafin/" class="header__social social-github" target="_blank"
-                title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+                <div class="header__social-networks">
 
-                <a href="https://angel.co/DominikSerafin" class="header__social social-angellist" target="_blank"
-                title="You may find more information about me here.">&nbsp;</a>
+                    <a href="https://twitter.com/SerafinDominik" class="header__social social-twitter" target="_blank"
+                    title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
 
-                <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="header__social social-linkedin-1" target="_blank"
-                title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
+                    <a href="https://dribbble.com/DominikSerafin" class="header__social social-dribbble" target="_blank"
+                    title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
 
-                <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+                    <a href="https://www.behance.net/dominikserafin" class="header__social social-behance" target="_blank"
+                    title="Here I upload complete projects showcases.">&nbsp;</a>
+
+                    <a href="https://github.com/DominikSerafin/" class="header__social social-github" target="_blank"
+                    title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+
+                    <a href="https://angel.co/DominikSerafin" class="header__social social-angellist" target="_blank"
+                    title="You may find more information about me here.">&nbsp;</a>
+
+                    <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="header__social social-linkedin-1" target="_blank"
+                    title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
+
+                    <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+
+                </div>
+
             </div>
+
+
+            <div class="header__nav">
+
+                <div class="header__nav-title">Things That I Have &mdash;</div>
+                <a href="/blog/template.html" class="header__nav-link">Created</a>
+                <a href="/blog/template.html" class="header__nav-link" title="Well... technically it's also created.">Wrote</a>
+
+            </div>
+
+
+
+
         </header>
 
-        <main class="layout__main">
 
-            <section class="layout__left">
 
-                <h2>Things I'm good at</h2>
 
-                <div>
-                    <h3>Product design</h3>
+
+        <main class="landing">
+
+
+            <h1 class="landing__main-title">Yay</h1>
+
+
+            <div class="landing__intro">
+
+                <section class="landing__section">
+
+                    <h2 class="landing__title">Product Designer</h2>
                     <p>I always loved to create. This affection transfered to product design with focus on web and mobile applications.</p>
-                    <p>I strive to create solutions which are intuitive, engaging and clear. I avoid overengineered and bloated designs.</p>
+                    <p>I strive to create solutions which are intuitive, engaging and clear. I avoid overengineered and bloated systems.</p>
                     <p>That means that I don't only push pixels on command. I'm also providing valuable feedback on features, ideas and the higher picture.</p>
 
                     <!--
@@ -121,10 +152,13 @@
                     </div>
                     -->
 
-                </div>
+                </section>
 
-                <div>
-                    <h3>Front-end engineering</h3>
+                <section class="landing__section">
+
+
+                    <h2 class="landing__title">Front-End Engineer</h2>
+
                     <p>If you can think it, I will create it. I deliver very organized, scalable and highly performant code which can be later maintained with ease.</p>
 
                     <p>In addition to the standard web stack (HTML5, CSS3 and JavaScript) my current workflow consists of <a href="https://git-scm.com/" target="_blank">GIT</a> for version control, <a href="http://sass-lang.com/" target="_blank">Sass</a> with <a href="https://en.bem.info/method/naming-convention/" target="_blank">BEM</a> for stylesheets, <a href="http://gulpjs.com/" target="_blank">Gulp</a> for tasks and great resourcefulness for all the rest.</p>
@@ -137,111 +171,149 @@
                     </div>
                     -->
 
-                </div>
+                </section>
 
-                <div>
-                    <h3>Back-end development</h3>
+
+
+                <section class="landing__section">
+
+
+                    <h2 class="landing__title">Back-End Developer</h2>
+
                     <p>Although my strongest experience is in design and front-end development I can code and deploy applications using <a href="https://www.python.org/" target="_blank">Python</a>, <a href="https://www.djangoproject.com/" target="_blank">Django</a>, <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> and <a href="http://nginx.org/" target="_blank">Nginx</a>.</p>
-                </div>
 
 
-            </section>
-
-            <section class="layout__right">
-                <h2>What I've recently made</h2>
-
-                <div class="project project--enboard" s#tyle="background-image:url('media/enboard-webdesign-01-compressed.png');">
-
-                    <div class="project__foreground">
-                        <h3 class="project__title">Enboard</h3>
-                        <p class="project__desc">Web app where you can create and share boards filled with various types of information.</p>
-                        <img class="project__image" src="media/enboard-webdesign-01-compressed.png" alt="">
+                    <!--
+                    <div class="readmore">
+                        <div class="readmore__content">
+                        </div>
+                        <p><button class="readmore__btn" data-more-text="Read more..." data-less-text="Read less...">Read more...</button></p>
                     </div>
+                    -->
 
-                    <div class="project__link-wrapper">
-                         <div class="project__link project__link--coming-soon">Case Study</div>
-                    </div>
+                </section>
 
-                    <div class="project__link-wrapper">
-                        <a class="project__link" target="_blank" href="http://enboard.co/">Live Version</a>
-                    </div>
+            </div>
 
 
-                    <div class="project__link-wrapper">
-                        <a class="project__link" target="_blank" href="http://enboard.co/webdesign/">My Web Design Board</a>
-                    </div>
 
-                    <div class="project__link-wrapper">
-                        <a class="project__link" target="_blank" href="http://enboard.co/frontend/">My Front End Board</a>
-                    </div>
+            <section class="landing__contact">
 
-                    <img class="project__background" src="media/enboard-webdesign-01-compressed.png" alt="">
-                </div>
+                <h2 class="landing__title">Available for Work</h2>
 
-                <div class="project project--joinapp" s#tyle="background-image:url('media/joinapp-list-02-compressed.png');">
-                    <div class="project__foreground">
-
-                        <h3 class="project__title">Join App</h3>
-                        <p class="project__desc">Concept and design for iOS application that lets you explore and create events.</p>
-                        <img class="project__image" src="media/joinapp-list-02-compressed.png" alt="">
-
-                    </div>
-
-                    <div class="project__link-wrapper">
-                        <div class="project__link project__link--coming-soon">Case Study</div>
-                    </div>
-
-                    <div class="project__link-wrapper">
-                        <div class="project__link project__link--coming-soon">View on Dribbble</div>
-                    </div>
-
-                    <div class="project__link-wrapper">
-                        <div class="project__link project__link--coming-soon">View on Behance</div>
-                    </div>
-
-
-                    <img class="project__background" src="media/joinapp-list-02-compressed.png" alt="">
-                </div>
-
-            </section>
-
-
-            <section class="layout__whole">
-                <h2>Let's do something together</h2>
                 <p>I'm available for a freelance or any other type of work (especially if you're a startup).</p>
-                <p>You can contact me through
+                <p>You can contact me through <span class="js-email">&mdash; You need to have JavaScript enabled to see this e-mail address. &mdash;</span> or using the social networks listed in the header.</p>
 
-                    <!-- http://hivelogic.com/enkoder/ -->
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        <!--
-                        var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-                        "=66){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
-                        ".substr(0,ol);}f(\")32,\\\"/#)821o\\\"\\\\0fej&kodidBsn130\\\\610\\\\030\\\\"+
-                        "020\\\\320\\\\720\\\\120\\\\230\\\\130\\\\120\\\\JQ.S,R310\\\\100\\\\030\\\\"+
-                        "200\\\\630\\\\IJ;310\\\\n\\\\700\\\\M610\\\\010\\\\100\\\\29530\\\\.5=*<<?;" +
-                        "=>=5j :!%*'k420\\\\z  _D310\\\\K520\\\\n\\\\710\\\\HIAWKSW1jsyvozws\\\"(f};" +
-                        "o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;i=+y)32==i(f" +
-                        "i{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"           ;
-                        while(x=eval(x));
-                        //-->
-                        //]]>
-                    </script>
 
-                    or using the social networks listed in the header.</p>
             </section>
+
+
+
+
         </main>
 
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        <article>
+
+            <div class="project project--enboard" s#tyle="background-image:url('media/enboard-webdesign-01-compressed.png');">
+
+                <div class="project__foreground">
+                    <h3 class="project__title">Enboard</h3>
+                    <p class="project__desc">Web app where you can create and share boards filled with various types of information.</p>
+                    <img class="project__image" src="media/enboard-webdesign-01-compressed.png" alt="">
+                </div>
+
+                <div class="project__link-wrapper">
+                     <div class="project__link project__link--coming-soon">Case Study</div>
+                </div>
+
+                <div class="project__link-wrapper">
+                    <a class="project__link" target="_blank" href="http://enboard.co/">Live Version</a>
+                </div>
+
+
+                <div class="project__link-wrapper">
+                    <a class="project__link" target="_blank" href="http://enboard.co/webdesign/">My Web Design Board</a>
+                </div>
+
+                <div class="project__link-wrapper">
+                    <a class="project__link" target="_blank" href="http://enboard.co/frontend/">My Front End Board</a>
+                </div>
+
+                <img class="project__background" src="media/enboard-webdesign-01-compressed.png" alt="">
+            </div>
+
+            <div class="project project--joinapp" s#tyle="background-image:url('media/joinapp-list-02-compressed.png');">
+                <div class="project__foreground">
+
+                    <h3 class="project__title">Join App</h3>
+                    <p class="project__desc">Concept and design for iOS application that lets you explore and create events.</p>
+                    <img class="project__image" src="media/joinapp-list-02-compressed.png" alt="">
+
+                </div>
+
+                <div class="project__link-wrapper">
+                    <div class="project__link project__link--coming-soon">Case Study</div>
+                </div>
+
+                <div class="project__link-wrapper">
+                    <div class="project__link project__link--coming-soon">View on Dribbble</div>
+                </div>
+
+                <div class="project__link-wrapper">
+                    <div class="project__link project__link--coming-soon">View on Behance</div>
+                </div>
+
+
+                <img class="project__background" src="media/joinapp-list-02-compressed.png" alt="">
+            </div>
+        </article>
+        -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+            <p>This isn't the state-of-the-art design because I've more interesting projects in works than my personal website.</p>
+            <p>Cookies are used here. Dominik Serafin &copy; 2015. All Rights Reserved.</p>
+        </footer>
+
+
+
+    <!-- end of body-smooth-state -->
     </div>
 
 
-    <footer class="footer">
-        <p>This website uses cookies.</p>
-        <p>Dominik Serafin &copy; 2015. All Rights Reserved.</p>
-    </footer>
+
 
     <!-- Scripts postload -->
     <script src="static/js-source/libs/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="static/js-source/libs/jquery.smoothState.min.js" type="text/javascript"></script>
+    <script src="static/js-source/global.js" type="text/javascript"></script>
     <script src="static/js/bundle.js" type="text/javascript"></script>
 
     <!-- Google Analytics -->

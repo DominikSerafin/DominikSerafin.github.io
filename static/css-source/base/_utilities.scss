@@ -20,6 +20,24 @@
     }
 
 
+    @mixin cool-underline($a-color, $underline-color, $outline-color) {
+
+        text-decoration: none;
+
+        background-image: linear-gradient(to bottom, $underline-color 75%, $underline-color 75%);
+        background-repeat: repeat-x;
+        background-size: 1px 1px;
+        background-position: 0 99.9%;
+
+        text-shadow:
+            -1px -1px 0 $outline-color,
+             1px -1px 0 $outline-color,
+            -1px  1px 0 $outline-color,
+             1px  1px 0 $outline-color;
+    }
+
+
+
 /*------------------------------------*\
     utilities
 \*------------------------------------*/
@@ -38,4 +56,15 @@
 
     .u-no-select {
         user-select: none;
+    }
+
+    .u-flex-columns {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .u-obfuscate-email {
+        unicode-bidi: bidi-override;
+        direction: rtl;
     }

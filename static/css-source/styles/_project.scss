@@ -6,7 +6,7 @@ $project-bg-color: rgb(245,245,245);
 
 
 .project.project {
-    margin: 0 0 30px 0;
+    margin: 30px 0 0 0;
     display: block;
     width: 100%;
     background-color: $project-bg-color;
@@ -84,6 +84,7 @@ $project-bg-color: rgb(245,245,245);
     display: inline-block;
     margin-top: 5px;
     text-shadow: none;
+
     &::before {
         display: none;
     }

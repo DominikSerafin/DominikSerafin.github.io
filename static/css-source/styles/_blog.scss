@@ -5,29 +5,10 @@
 $font-heading: "Karla", sans-serif;
 
 
-$font-body: "Karla", sans-serif;
+$font-body: "Work Sans", sans-serif;
 $size-body: 20px;
 $line-height-body: 1.4;
 $color-body: rgb(50,50,50);
-
-
-
-@mixin link {
-
-    $a-color: black;
-    $underline-color: #222;
-    $outline-color: white;
-
-    color: black;
-    font-weight: 600;
-    background-image: linear-gradient(to bottom,$underline-color 75%,$underline-color 75%);
-    text-shadow: -1px -1px 0 $outline-color,1px -1px 0 $outline-color,-1px 1px 0 $outline-color,1px 1px 0 $outline-color;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    background-position: 0 99.9%;
-    text-decoration: none;
-
-}
 
 
 
@@ -58,7 +39,7 @@ $color-body: rgb(50,50,50);
     h1 {
         font-weight: 700;
         font-family: $font-heading;
-        font-size: 30px;
+        font-size: 40px;
         margin: 100px 0 20px 0;
 
     }
@@ -66,9 +47,8 @@ $color-body: rgb(50,50,50);
     h2 {
         font-weight: 700;
         font-family: $font-heading;
-        font-size: 25px;
-        margin: 30px 0 20px 0;
-
+        font-size: 30px;
+        margin: 100px 0 20px 0;
     }
 
 
@@ -79,14 +59,14 @@ $color-body: rgb(50,50,50);
     {
         font-weight: 700;
         font-family: $font-heading;
-        font-size: 20px;
-        margin: 30px 0 20px 0;
+        font-size: 25px;
+        margin: 50px 0 20px 0;
 
     }
 
     p {
 
-        a { @include link; }
+        a { @include cool-underline(gray, gray, white); }
 
 
         font-family: $font-body;
@@ -107,7 +87,7 @@ $color-body: rgb(50,50,50);
 
     aside {
 
-        a { @include link; }
+        a { @include cool-underline(gray, gray, white); }
 
 
         font-family: $font-body;
@@ -116,7 +96,7 @@ $color-body: rgb(50,50,50);
         font-size: 16px;
         width: 250px;
         text-align: right;
-        margin-top: 20px;
+        padding-top: 3px;
         opacity: .5;
 
         //transition: opacity 300ms ease-in-out;
@@ -138,6 +118,10 @@ $color-body: rgb(50,50,50);
 
     li {
         @extend p;
+    }
+
+    ul {
+        margin-left: 30px;
     }
 
 }

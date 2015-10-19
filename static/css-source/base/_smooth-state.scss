@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    keyframes
+\*------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------*\
+    animations
+\*------------------------------------*/
+
+
+.ss__element {
+    transition: opacity 500ms ease-in-out;
+}
+
+
+.ss__element--fadein {
+}
+
+
+.ss__scene.is-exiting .ss__element--fadein {
+    opacity: 0;
+}

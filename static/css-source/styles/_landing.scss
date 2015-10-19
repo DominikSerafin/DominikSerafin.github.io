@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    layout
+\*------------------------------------*/
+
+.landing {
+    max-width: 1200px;
+
+    margin: 50px auto;
+    padding: 0 50px;
+
+
+    p {
+        font-size: 17px;
+        margin-top: 15px;
+        line-height: 1.4;
+        color: rgba(black,.6);
+    }
+
+    a {
+        @include cool-underline(gray, gray, white);
+        font-weight: 400;
+    }
+
+
+}
+
+
+.landing__intro {
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+}
+
+
+.landing__main-title {
+    font-weight: 700;
+    font-family: "Karla";
+    margin-top: 80px;
+    font-size: 40px;
+    color: rgba(black,.75);
+}
+
+.landing__title {
+    font-weight: 700;
+    font-family: "Karla";
+    margin-top: 40px;
+    font-size: 21px;
+    color: rgba(black,.75);
+}
+
+
+.landing__section {
+    flex: 1;
+    max-width: 30%;
+}
+
+
+.landing__contact {
+    margin-top: 100px;
+}
+
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
+@media screen and (max-width: 1000px) {
+
+    .landing__intro {
+        flex-direction: column;
+    }
+
+    .landing__section {
+        max-width: none;
+    }
+
+}
+

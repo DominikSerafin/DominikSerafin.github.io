@@ -154,8 +154,8 @@ gulp.task('cssbuild', function() {
     .pipe(sass(sassconfig))
     .pipe(autoprefixer(autoprefixerconfig))
   .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(css.dest))
-  .pipe(browserSync.reload({stream: true}));
+  .pipe(gulp.dest(css.dest));
+  //.pipe(browserSync.reload({stream: true}));
 
 });
 
@@ -182,6 +182,8 @@ gulp.task('watch', function() {
   //build
   gulp.watch('static/css-source/**/*.scss',  ['cssbuild']);
   gulp.watch('static/js-source/**/*.js',     ['jsbuild']);
+
+  gulp.watch('static/css/global.css',        ['reload']);
 
 });
 
