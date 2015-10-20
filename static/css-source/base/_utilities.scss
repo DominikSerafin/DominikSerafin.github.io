@@ -20,14 +20,14 @@
     }
 
 
-    @mixin cool-underline($a-color, $underline-color, $outline-color) {
+    @mixin cool-underline($a-color, $underline-color, $outline-color, $position) {
 
         text-decoration: none;
 
         background-image: linear-gradient(to bottom, $underline-color 75%, $underline-color 75%);
         background-repeat: repeat-x;
         background-size: 1px 1px;
-        background-position: 0 99.9%;
+        background-position: 0 $position;
 
         text-shadow:
             -1px -1px 0 $outline-color,

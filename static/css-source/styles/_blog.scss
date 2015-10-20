@@ -6,9 +6,6 @@ $font-heading: "Karla", sans-serif;
 
 
 $font-body: "Work Sans", sans-serif;
-$size-body: 20px;
-$line-height-body: 1.4;
-$color-body: rgb(50,50,50);
 
 
 
@@ -29,26 +26,56 @@ $color-body: rgb(50,50,50);
 }
 
 .blog__widescreen-flow {
-    margin: 80px 0;
+    margin: 160px 0;
 }
 
 
 
 .blog__content {
 
+
+    header {
+        margin-top: 120px;
+
+        time {
+            font-family: $font-heading;
+            font-size: 16px;
+            color: rgba(black,.5);
+        }
+
+        h1 {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-top: 20px;
+            letter-spacing: 1px;
+            color: rgba(black,.5);
+            font-size: 18px;
+        }
+
+        a {
+            color: rgba(black,.5);
+            font-weight: 400;
+            @include cool-underline(rgba(black,.4), rgba(black,.4), white, 95%);
+        }
+    }
+
+
     h1 {
         font-weight: 700;
         font-family: $font-heading;
-        font-size: 40px;
-        margin: 100px 0 20px 0;
-
+        font-size: 50px;
+        margin: 100px 0 25px 0;
+        line-height: 1.2;
     }
 
     h2 {
         font-weight: 700;
         font-family: $font-heading;
         font-size: 30px;
-        margin: 100px 0 20px 0;
+        margin: 100px 0 25px 0;
     }
 
 
@@ -60,20 +87,31 @@ $color-body: rgb(50,50,50);
         font-weight: 700;
         font-family: $font-heading;
         font-size: 25px;
-        margin: 50px 0 20px 0;
+        margin: 80px 0 25px 0;
+    }
 
+
+    h2 + h3,
+    h2 + h4,
+    h2 + h5,
+    h2 + h6
+    {
+        margin-top: 60px;
+    }
+
+    a {
+        @include cool-underline(gray, gray, white, 90%);
+        font-weight: 500;
     }
 
     p {
 
-        a { @include cool-underline(gray, gray, white); }
-
 
         font-family: $font-body;
-        font-size: $size-body;
-        line-height: $line-height-body;
-        color: $color-body;
-        margin: 20px 0 20px 0;
+        font-size: 20px;
+        line-height: 1.45;
+        color: rgb(60,60,60);
+        margin: 25px 0 25px 0;
 
 
     }
@@ -87,7 +125,7 @@ $color-body: rgb(50,50,50);
 
     aside {
 
-        a { @include cool-underline(gray, gray, white); }
+        a { @include cool-underline(gray, gray, white, 95%); }
 
 
         font-family: $font-body;
@@ -109,10 +147,9 @@ $color-body: rgb(50,50,50);
 
     code {
         font-family: "Ubuntu Mono", monospace, monospace;
-        background-color: rgb(240,240,240);
-        padding: 0 5px;
+        //background-color: rgb(240,240,240);
         border-radius: 2px;
-        font-size: $size-body;
+        font-size: 20px;
     }
 
 
@@ -120,8 +157,23 @@ $color-body: rgb(50,50,50);
         @extend p;
     }
 
-    ul {
+    ul,
+    ol
+    {
         margin-left: 30px;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+
+    footer {
+
+        padding: 50px 20px;
+        margin-top: 100px;
+
+        border-top: 1px solid rgba(black,.05);
     }
 
 }
@@ -139,5 +191,20 @@ $color-body: rgb(50,50,50);
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+@media screen and (max-width: 1000px) {
+
+    .blog__normal-flow {
+        padding: 0 20px;
+    }
+
+
+    .blog__widescreen-flow {
+        margin: 100px 0;
+    }
+
+
+
+}
+
 
 

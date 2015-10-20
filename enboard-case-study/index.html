@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" class="blog">
+<html lang="">
 
 <head>
 
@@ -120,8 +120,8 @@
             <div class="header__nav">
 
                 <div class="header__nav-title">Things That I Have &mdash;</div>
-                <a href="/blog/template.html" class="header__nav-link">Created</a>
-                <a href="/blog/template.html" class="header__nav-link" title="Well... technically it's also created.">Wrote</a>
+                <a href="/projects/" class="header__nav-link">Created</a>
+                <a href="/enboard-case-study/index.html" class="header__nav-link" title="Well... technically they are also created.">Wrote</a>
 
             </div>
 
@@ -137,8 +137,14 @@
             <div class="blog__normal-flow">
 
 
-                <h1>Building Enboard</h1>
+                <header>
+                    <time datetime="2015-10-20T15:35Z">20 October, 2015 at 15:35</time>
 
+                    <h1>How I've created Enboard &mdash; a case study</h1>
+
+                    <p>Building <a href="">Enboard</a> all by myself wasn't an easy task and I've made many mistakes along the way. Which is my favorite way to learn.</p>
+
+                </header>
 
                 <h2>History and Idea</h2>
 
@@ -166,17 +172,15 @@
                 <p>Board owners can quickly edit categories and items placement thanks to drag and drop interface. Content addition is also quick and easy, link items have auto-filled titles and descriptions scraped from websites open graph tags with fallback to standard site title and meta description tags.</p>
 
 
-                <!--
                 <h3>Color Themes</h3>
 
                 <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
 
                 <aside>
-                    Icon fonts are really useful because they are vector based and you can also easily change their color (among some other properties).
+                    Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
                 </aside>
 
                 <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
-                -->
 
 
                 <h3>Counting number of shares</h3>
@@ -229,15 +233,152 @@
             <div class="blog__normal-flow">
 
 
-                <h2>Development</h2>
+                <h2>Technology &amp; Development</h2>
 
 
-                <h3>Tech Stack</h3>
+                <h3>Front-End Structure &amp; Builds</h3>
 
-                <p>Enboard couldn't be made in such a short span of time without libraries and services listed below.</p>
+                <p>From the beginning I've wanted to make Enboard very fast. </p>
+
+                <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
+
+                <p>My CSS preprocessor of choice is <a href="">Sass</a>. It let me to easily create custom color themes (with the help of mixins) and to have modular CSS structure based on <a href="" title="Block, Element, Modifier.">BEM methodology.</a> Along with Sass, I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
+
+                <p>JavaScript isn't something special, I have used </p>
+
+
+
+
+                <h3>Server Set-Up</h3>
+
+                <aside>
+                    I was considering using similar <a href="">DigitalOcean</a> but Linode looked more mature and trustworthy.
+                </aside>
+
+                <p>All the application code, static files and <a href="">PostgreSQL</a> databases are hosted on a Ubuntu 14.04 <a href="">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
+
+                <p>For web server I've chosen <a href="">Nginx</a> because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a static files server.</p>
+
+                <p><a href="">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
+
+                <p>I'm also using <a href="">CloudFlare</a>, which is basically a plug-and-play location sensitive CDN, cache and security protection (and some other cool things) and it lets visitor know when the website is down.</p>
+
+
+
+                <h3>Deployment</h3>
+
+                <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> and pull them from Linode server.</p>
+
+                <p><strong>My usual deployment flow looked like this:</strong></p>
+
+                <ol>
+                    <li>Update code and merge GIT branches.</li>
+                    <li>Change static files versions using GET <code>?v=</code> parameter at the end of links to files so that end users will get fresh styles and scripts.</li>
+                    <li><code>git push</code> from local development set-up.</li>
+                    <li><code>git pull</code> inside server.</li>
+                    <li>Database migration &mdash; if necessary.</li>
+                    <li>Static files collect.</li>
+                    <li>CloudFlare cache clear.</li>
+                    <li>Application restart.</li>
+                </ol>
+
+
+
 
 
             </div>
+            <div class="blog__widescreen-flow">
+
+                <img src="https://unsplash.it/2000/600/?random" alt="">
+
+            </div>
+            <div class="blog__normal-flow">
+
+
+
+                <h2>Complete Tech Stack</h2>
+
+                <p>Enboard couldn't be made single-handedly in such a short span amount of time without libraries, tools and services listed below.</p>
+
+
+
+                <h3>Front-End &amp; Design</h3>
+                <ul>
+                    <li><a target="_blank" href="">Gulp</a> for code builds.</li>
+                    <li><a target="_blank" href="">Sass</a>, a css preprocessor.</li>
+                    <li><a target="_blank" href="">Autoprefixer</a> which adds automatic css vendor prefixes.</li>
+                    <li><a target="_blank" href="">jQuery</a></li>
+                    <li><a target="_blank" href="">jQuery UI</a></li>
+                    <li><a target="_blank" href="https://github.com/bramstein/fontfaceobserver">Font Observer</a> as a progressive enhancement for custom fonts.</li>
+                    <li><a target="_blank" href="">entypo+</a>, a neatly looking modern icons.</li>
+                    <li><a target="_blank" href="">Roboto</a>, a font created by Google.</li>
+                </ul>
+
+                <h3>Services &amp; Tools</h3>
+                <ul>
+                    <li><a target="_blank" href="">Photoshop</a></li>
+                    <li><a target="_blank" href="">Linode</a></li>
+                    <li><a target="_blank" href="">Cloudflare</a></li>
+                    <li><a target="_blank" href="">SendGrid</a></li>
+                    <li><a target="_blank" href="">Google Analytics</a></li>
+                    <li><a target="_blank" href="">HotJar</a></li>
+                    <li><a target="_blank" href="">BitBucket</a></li>
+                    <li><a target="_blank" href="">PuTTY</a></li>
+                    <li><a target="_blank" href="">Google Fonts</a></li>
+                    <li><a target="_blank" href="">Fontastic</a></li>
+                    <li><a target="_blank" href="">Tinypng</a></li>
+                    <li><a target="_blank" href="">Real Favicon Generator</a></li>
+                </ul>
+
+                <h3>Back-End</h3>
+                <ul>
+                    <li><a target="_blank" href="">Nginx</a></li>
+                    <li><a target="_blank" href="">Gunicorn</a></li>
+                    <li><a target="_blank" href="">Python</a></li>
+                    <li><a target="_blank" href="">Django</a></li>
+                    <li><a target="_blank" href="">django-allauth</a></li>
+                </ul>
+
+
+
+
+
+
+
+            </div>
+            <div class="blog__widescreen-flow">
+
+                <img src="https://unsplash.it/2000/700/?random" alt="">
+
+            </div>
+            <div class="blog__normal-flow">
+
+
+                <h2>Mistakes</h2>
+
+
+                <p>The most daring mistake I've made is the number of iterations Enboard got through.</p>
+
+
+
+
+
+
+
+
+                <footer>
+
+                    <p>Dominik is a freelance designer &amp; developer.</p>
+
+
+                </footer>
+
+
+
+            </div>
+
+
+
 
 
         </main>
@@ -255,9 +396,11 @@
 
 
 
+
+
         <footer class="footer">
-            <p>This website uses cookies.</p>
-            <p>Dominik Serafin &copy; 2015. All Rights Reserved.</p>
+            <p>This isn't the state-of-the-art design because I've more interesting projects in works than my personal website.</p>
+            <p>Cookies are used here. Dominik Serafin &copy; 2015. All Rights Reserved.</p>
         </footer>
 
 
