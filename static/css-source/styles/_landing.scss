@@ -25,14 +25,11 @@
 }
 
 
-.landing__intro {
-
-
+.landing__row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-
+    margin-top: 80px;
 }
 
 
@@ -55,7 +52,7 @@
 
 .landing__section {
     flex: 1;
-    max-width: 30%;
+    padding-right: 40px;
 }
 
 
@@ -70,13 +67,10 @@
 \*------------------------------------*/
 @media screen and (max-width: 1000px) {
 
-    .landing__intro {
+    .landing__row {
         flex-direction: column;
     }
 
-    .landing__section {
-        max-width: none;
-    }
 
 }
 

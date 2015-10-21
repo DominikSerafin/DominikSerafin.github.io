@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Site informations -->
-    <title>Dominik Serafin Blog</title>
+    <title>How I've created Enboard &mdash; a case study</title>
     <meta name="author" content="Dominik Serafin">
-    <meta name="description" content="">
+    <meta name="description" content="If you want to know how to create application such as <a href="">Enboard</a> or you're interested in my workflow then you should read this.">
 
     <!-- Open Graph -->
     <!--
@@ -142,7 +142,7 @@
 
                     <h1>How I've created Enboard &mdash; a case study</h1>
 
-                    <p>Building <a href="">Enboard</a> all by myself wasn't an easy task and I've made many mistakes along the way. Which is my favorite way to learn.</p>
+                    <p>If you want to know how to create application such as <a href="">Enboard</a> or you're interested in my workflow then you should read this.</p>
 
                 </header>
 
@@ -170,22 +170,6 @@
                 <p>I wanted to keep things simple and clean so that's why board is reduced to only essentials - items (with optional hover descriptions) organized through categories. That results in a glanceable and optimally packed content that can be quickly explored and accessed by users.</p>
 
                 <p>Board owners can quickly edit categories and items placement thanks to drag and drop interface. Content addition is also quick and easy, link items have auto-filled titles and descriptions scraped from websites open graph tags with fallback to standard site title and meta description tags.</p>
-
-
-                <h3>Color Themes</h3>
-
-                <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
-
-                <aside>
-                    Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
-                </aside>
-
-                <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
-
-
-                <h3>Counting number of shares</h3>
-
-                <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs. Instead I've created custom sharing buttons that open sharing dialog in new popup window. Share count is displayed in a board header as a cumulative number updated every 6 hours from selected social networks, e.g. I don't count reddit upvotes as shares. That way I don't need to use any bloated iframes and limit network requests to minimum.</p>
 
 
                 <h3>Suggestions</h3>
@@ -227,26 +211,22 @@
             </div>
             <div class="blog__widescreen-flow">
 
-                <img src="https://unsplash.it/2000/500/?random" alt="">
+                <img src="devu.png" alt="">
+
+                <!--
+                <blockquote>
+                    <blockquote>
+                        <p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
+                        <footer><cite>Phil Karlton</cite></footer>
+                    </blockquote>
+                </blockquote>
+                 -->
 
             </div>
             <div class="blog__normal-flow">
 
 
                 <h2>Technology &amp; Development</h2>
-
-
-                <h3>Front-End Structure &amp; Builds</h3>
-
-                <p>From the beginning I've wanted to make Enboard very fast. </p>
-
-                <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
-
-                <p>My CSS preprocessor of choice is <a href="">Sass</a>. It let me to easily create custom color themes (with the help of mixins) and to have modular CSS structure based on <a href="" title="Block, Element, Modifier.">BEM methodology.</a> Along with Sass, I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
-
-                <p>JavaScript isn't something special, I have used </p>
-
-
 
 
                 <h3>Server Set-Up</h3>
@@ -257,17 +237,18 @@
 
                 <p>All the application code, static files and <a href="">PostgreSQL</a> databases are hosted on a Ubuntu 14.04 <a href="">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
 
-                <p>For web server I've chosen <a href="">Nginx</a> because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a static files server.</p>
+                <p>For web server I've chosen <a href="">Nginx</a> because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a server for static files.</p>
 
                 <p><a href="">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
 
-                <p>I'm also using <a href="">CloudFlare</a>, which is basically a plug-and-play location sensitive CDN, cache and security protection (and some other cool things) and it lets visitor know when the website is down.</p>
+                <p>In addition I'm using <a href="">CloudFlare</a>, which is basically a plug-and-play location sensitive <abbr title="Content Delivery Network">CDN</abbr>, cache, security protection and some other things. It also lets visitor know when the website is down.</p>
+
 
 
 
                 <h3>Deployment</h3>
 
-                <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> and pull them from Linode server.</p>
+                <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> repository and pull them from Linode server.</p>
 
                 <p><strong>My usual deployment flow looked like this:</strong></p>
 
@@ -285,50 +266,128 @@
 
 
 
+                <h3>Front-End Structure &amp; Builds</h3>
+
+
+                <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
+
+                <p>My CSS preprocessor of choice is <a href="">Sass</a>. It let me to easily create custom color themes (with the help of mixins) and to have modular CSS structure based on <a href="" title="Block, Element, Modifier.">BEM methodology.</a> Along with Sass, I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
+
+                <p style="color:red;">JavaScript isn't something special, I have used </p>
+
+
+                <h3>Color Themes</h3>
+
+                <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
+
+                <aside>
+                    Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
+                </aside>
+
+                <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
+
+
+                <h3>Counting number of shares</h3>
+
+                <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs. Instead I've created custom sharing buttons that open sharing dialog in new popup window. Share count is displayed in a board header as a cumulative number updated every 6 hours from selected social networks, e.g. I don't count reddit upvotes as shares. That way I don't need to use any bloated iframes and limit network requests to minimum.</p>
+
+
+                <h2>Performance Optimizations</h2>
+
+                <p><strong>From the beginning I've wanted to make Enboard very fast.</strong> I've implemented couple of techniques that improved normal and perceived load times.</p>
+
+                <p>All relevant file extensions are cached and gzip compressed using Nginx and HTML pages are minified using Django bult-in filters.</p>
+
+                <p>Stylesheets and scripts are concatenated and minified using Gulp build into 3 files to reduce network requests &mdash; global stylesheet, dependency scripts and scripts controlling the application.</p>
+
+
+                <h3>Reducing Initial Server Response</h3>
+
+                <p>Bigger boards had a very long server response times because they contained a lot of items with many database relationships. I've solved that issue by loading items using AJAX after initial page load.</p>
+
+                <p>To take things a step further I've also deferred other components like board creator data and changelog.</p>
+
+
+
+                <h3>Lazdy Font Loading</h3>
+
+                <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font (in this case Roboto) only after it's loaded. Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
+
+                <aside>For generating icon fonts I've used <a href="">Fontastic</a>.</aside>
+
+                <p>While we are speaking about fonts, we may also speak about icon fonts. I've used entypo+ icons packaged as a font. This resulted in a only one ~13kb request for icons. This approach also made every icon crisp on high-density displays because they are vector based and let me easily customize their color on custom board themes.</p>
+
+
+                <h3>Reducing Network Requests</h3>
+
+                <aside>I didn't succeeded in completely eliminating 3rd party scripts since I'm using analytics tools like Google Analytics and HotJar.</aside>
+
+                <p>I've also tried to minimize 3rd party resources requests to minimum. That's why I don't use any social network widgets for share buttons. I've gone with more lightweight solution. My share buttons are just links to "sharer" urls that opens pop-up window with share dialog.</p>
+
+                <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
+
+                <p>For displaying shares number I'm using custom Python script that counts shares using social networks APIs every 6 hours and updates database when that number has increased.</p>
+
+
+
 
             </div>
             <div class="blog__widescreen-flow">
 
-                <img src="https://unsplash.it/2000/600/?random" alt="">
+                <img src="updateeeee67u.png" alt="">
 
             </div>
             <div class="blog__normal-flow">
 
 
 
-                <h2>Complete Tech Stack</h2>
+                <h2>Analytics &amp; User Feedback</h2>
 
-                <p>Enboard couldn't be made single-handedly in such a short span amount of time without libraries, tools and services listed below.</p>
+                <p>For tracking traffic and other stats I'm just using the ol' plain <a href="">Google Analytics</a>.</p>
 
+                <p>For tracking user bahavior and gathering feedback I'm using <a href="">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
+
+                <p>On Enboard I've used click heatmaps and user recordings to detect and solve usabilty issues and polls and surveys to gather feedback.</p>
+
+
+
+
+
+                <h2>Credits</h2>
+
+                <p>Enboard couldn't be made single-handedly in such a short span amount of time without websites, articles, libraries, tools and services listed below.</p>
+
+
+
+
+                <h3>Websites &amp; Articles</h3>
+                <ul>
+                    <li><a target="_blank" href="http://adambeagle.com/blog/deploying-django-17-ubuntu/">Deploying Django 1.7 on Ubuntu with DigitalOcean</a> by Adam Beagle</li>
+                    <li><a target="_blank" href="https://www.filamentgroup.com/lab/font-events.html">Font Loading Revisited with Font Events</a> by filament group</li>
+                    <li><a target="_blank" href="http://html5doctor.com/">HTML5 Doctor</a></li>
+                </ul>
+
+
+
+                <h3>Design</h3>
+                <ul>
+                    <li><a target="_blank" href="">entypo+</a></li>
+                    <li><a target="_blank" href="">Roboto</a></li>
+                </ul>
 
 
                 <h3>Front-End &amp; Design</h3>
                 <ul>
-                    <li><a target="_blank" href="">Gulp</a> for code builds.</li>
-                    <li><a target="_blank" href="">Sass</a>, a css preprocessor.</li>
-                    <li><a target="_blank" href="">Autoprefixer</a> which adds automatic css vendor prefixes.</li>
+                    <li><a target="_blank" href="">Gulp</a></li>
+                    <li><a target="_blank" href="">Sass</a></li>
+                    <li><a target="_blank" href="">Autoprefixer</a></li>
                     <li><a target="_blank" href="">jQuery</a></li>
                     <li><a target="_blank" href="">jQuery UI</a></li>
-                    <li><a target="_blank" href="https://github.com/bramstein/fontfaceobserver">Font Observer</a> as a progressive enhancement for custom fonts.</li>
-                    <li><a target="_blank" href="">entypo+</a>, a neatly looking modern icons.</li>
-                    <li><a target="_blank" href="">Roboto</a>, a font created by Google.</li>
+                    <li><a target="_blank" href="https://github.com/bramstein/fontfaceobserver">Font Observer</a></li>
                 </ul>
 
-                <h3>Services &amp; Tools</h3>
-                <ul>
-                    <li><a target="_blank" href="">Photoshop</a></li>
-                    <li><a target="_blank" href="">Linode</a></li>
-                    <li><a target="_blank" href="">Cloudflare</a></li>
-                    <li><a target="_blank" href="">SendGrid</a></li>
-                    <li><a target="_blank" href="">Google Analytics</a></li>
-                    <li><a target="_blank" href="">HotJar</a></li>
-                    <li><a target="_blank" href="">BitBucket</a></li>
-                    <li><a target="_blank" href="">PuTTY</a></li>
-                    <li><a target="_blank" href="">Google Fonts</a></li>
-                    <li><a target="_blank" href="">Fontastic</a></li>
-                    <li><a target="_blank" href="">Tinypng</a></li>
-                    <li><a target="_blank" href="">Real Favicon Generator</a></li>
-                </ul>
+
+
 
                 <h3>Back-End</h3>
                 <ul>
@@ -342,40 +401,101 @@
 
 
 
-
-
-
-            </div>
-            <div class="blog__widescreen-flow">
-
-                <img src="https://unsplash.it/2000/700/?random" alt="">
-
-            </div>
-            <div class="blog__normal-flow">
-
-
-                <h2>Mistakes</h2>
-
-
-                <p>The most daring mistake I've made is the number of iterations Enboard got through.</p>
+                <h3>Services</h3>
+                <ul>
+                    <li><a target="_blank" href="">Linode</a></li>
+                    <li><a target="_blank" href="">CloudFlare</a></li>
+                    <li><a target="_blank" href="">SendGrid</a></li>
+                    <li><a target="_blank" href="">Google Analytics</a></li>
+                    <li><a target="_blank" href="">HotJar</a></li>
+                    <li><a target="_blank" href="">BitBucket</a></li>
+                    <li><a target="_blank" href="">Google Fonts</a></li>
+                </ul>
 
 
 
 
+                <h3>Tools</h3>
+                    <li><a target="_blank" href="">Photoshop</a></li>
+                    <li><a target="_blank" href="">Fontastic</a></li>
+                    <li><a target="_blank" href="">Real Favicon Generator</a></li>
+                    <li><a target="_blank" href="">TinyPNG</a></li>
+                    <li><a target="_blank" href="">PuTTY</a></li>
+                    <li><a target="_blank" href="">WinSCP</a></li>
+                <ul>
 
 
 
 
-                <footer>
 
-                    <p>Dominik is a freelance designer &amp; developer.</p>
-
-
-                </footer>
 
 
 
             </div>
+
+
+
+
+
+            <footer>
+
+                <p>Dominik is a freelance designer &amp; developer.</p>
+
+
+                <style>
+                    #mc_embed_signup {
+                        font-size:16px;background-color:rgb(230,230,230);
+                        padding: 20px;
+                    }
+
+                    #mc_embed_signup input[type="text"],
+                    #mc_embed_signup input[type="email"] {
+                        display: block;
+                        background-color: white;
+                    }
+
+                    #mc_embed_signup input[type="submit"] {
+                        font-weight: 700;
+
+                    }
+                </style>
+
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                <form action="//enboard.us11.list-manage.com/subscribe/post?u=9b0347fba769f9752a89e69c9&amp;id=4f23632c85" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    <h2>Join my private email list</h2>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </div>
+
+                <!--
+                <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </div>
+                -->
+
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_9b0347fba769f9752a89e69c9_4f23632c85" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+                </div>
+
+                <!--End mc_embed_signup-->
+
+            </footer>
+
+
 
 
 
