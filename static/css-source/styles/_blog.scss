@@ -1,11 +1,4 @@
 /*------------------------------------*\
-    variables
-\*------------------------------------*/
-
-
-
-
-/*------------------------------------*\
     styles
 \*------------------------------------*/
 
@@ -22,6 +15,9 @@
 
 .blog__widescreen-flow {
     margin: 160px 0;
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -45,7 +41,7 @@
 
         p {
             margin-top: 20px;
-            letter-spacing: 1px;
+            letter-spacing: .7px;
             color: rgba(black,.5);
             font-size: 18px;
         }
@@ -78,7 +74,7 @@
 
     h2 {
         font-size: 34px;
-        margin: 100px 0 25px 0;
+        margin: 180px 0 25px 0;
     }
 
 
@@ -93,14 +89,14 @@
 
 
 
-    //h2 {
-    //    & + h3,
-    //    & + h4,
-    //    & + h5,
-    //    & + h6 {
-    //        margin-top: 40px;
-    //    }
-    //}
+    h2 {
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h6 {
+            margin-top: 40px;
+        }
+    }
 
 
 

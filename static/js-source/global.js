@@ -1,7 +1,8 @@
 
-var $body = $('html, body'),
+var $body = $('html, body');
 
-smoothState = $('#smooth-state').smoothState({
+/*
+var smoothState = $('#smooth-state').smoothState({
 
     prefetch: true,
 
@@ -52,6 +53,10 @@ smoothState = $('#smooth-state').smoothState({
 
 }).data('smoothState');
 //.data('smoothState') makes public methods available
+*/
+
+
+
 
 
 var writemail = function(){
@@ -59,4 +64,18 @@ var writemail = function(){
 };
 
 writemail();
+
+
+
+$(document).on('click', 'a', function(event) {
+
+   var a = new RegExp('/' + window.location.host + '/');
+
+   if(!a.test(this.href)) {
+       event.preventDefault();
+       event.stopPropagation();
+       window.open(this.href, '_blank');
+   }
+
+});
 

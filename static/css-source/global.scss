@@ -21,9 +21,11 @@
     @import "styles/_layout.scss";
     @import "styles/_header.scss";
     @import "styles/_landing.scss";
+    @import "styles/_articles.scss";
     @import "styles/_readmore.scss";
     @import "styles/_project.scss";
     @import "styles/_blog.scss";
+    @import "styles/_author.scss";
     @import "styles/_footer.scss";
 
 
@@ -31,6 +33,7 @@
     other
 \*------------------------------------*/
 
+    @import "styles/_embeds.scss";
     //@import "_z-index.scss";      // z-index catalog
     // @import "_shame.scss";       // http://csswizardry.com/2013/04/shame-css/
 

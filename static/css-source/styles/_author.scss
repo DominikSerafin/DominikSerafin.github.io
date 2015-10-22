@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    styles
+\*------------------------------------*/
+
+.author {
+    padding: 100px 0;
+    margin-top: 100px;
+    border-top: 1px solid rgba(black,.05);
+}
+
+    .author__wrapper {
+        max-width: 680px;
+        margin: 0 auto;
+        @include clearfix;
+    }
+
+
+    .author__image {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        float: left;
+        overflow: hidden;
+    }
+
+    .author__heading {
+        float: left;
+        width: 400px;
+        margin-left: 50px;
+    }
+
+        .author__title {
+            font-size: 34px;
+            font-family: "Karla", sans-serif;
+            font-weight: 700;
+        }
+
+        .author__desc {
+            font-size: 20px;
+            color: gray;
+        }
+
+
+/*------------------------------------*\
+    states
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+    media-queries
+\*------------------------------------*/
