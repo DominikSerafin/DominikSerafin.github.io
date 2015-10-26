@@ -150,18 +150,47 @@
 
                 </header>
 
+
+                <hr>
+
+
+
+            </div>
+            <div class="blog__widescreen-flow">
+
+                <img src="history.png" alt="">
+
+
+            </div>
+            <div class="blog__normal-flow">
+
+
+
+
+
+
+
                 <h2>History and Idea</h2>
 
-                <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like <a href="http://enboard.co/webdesign/" target="_blank">Delicious</a> etc. but unfortunately nothing cut it for me.</p>
+                <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with a browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like <a href="http://enboard.co/webdesign/" target="_blank">Delicious</a> etc. but unfortunately nothing cut it for me.</p>
 
                 <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn" target="_blank">exists</a>, btw.</aside>
 
-                <p>That is when I've got an idea to create a simple static page where I could keep all my bookmarks organized through categories in a way I liked to. I've named it DopeLists.com and at the beginning it was only about <a href="http://enboard.co/webdesign/" target="_blank">web design</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/" target="_blank">front-end</a>, <a href="http://enboard.co/afterformat/" target="_blank">after format</a> and <a href="http://enboard.co/usefulwebsites/" target="_blank">general websites</a>.</p>
+                <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. I've named it DopeLists.com and at the beginning it was only about <a href="http://enboard.co/webdesign/" target="_blank">web design</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/" target="_blank">front-end</a>, <a href="http://enboard.co/afterformat/" target="_blank">after format</a> and <a href="http://enboard.co/usefulwebsites/" target="_blank">general websites</a>.</p>
 
-                <p>I've later changed its name (again) to Beaqn.in and also redesigned and refactored it a bit because of bad markup decisions and tiresome way of adding new links.</p>
+                <aside>Don't ask me why I've changed name so often. I don't remember it myself.</aside>
 
-                <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions. Among the user feedback there were many questions if Beaqn source code could be used for their own lists. That's how I've got an idea to create web app where people could do exactly that but without messing in code.</p>
+                <p>I've later redesigned and refactored it a bit, because of bad markup decisions and time-wasting way of adding new links. Name was also changed (again) to Beaqn.in.</p>
 
+                <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions.</p>
+
+                <p>Among the user feedback there were many questions if Beaqn source code could be used for their own lists. That's how I've got an idea to create such web app where people could do exactly that, but without messing in code.</p>
+
+
+
+
+
+                <hr>
 
 
 
@@ -171,12 +200,12 @@
 
                 <img src="boards-cool-white.png" alt="">
 
+
             </div>
             <div class="blog__normal-flow">
 
 
-
-
+                <!--
                 <h2>Structure</h2>
 
                 <p>It's nothing complex really. Enboard basically consists of user dashboard, boards and collections of boards.</p>
@@ -188,25 +217,47 @@
 
                 <p>Second one is a view for users without account. It consists of mentioned earlier "Discover" tab and mini landing page with registration form.</p>
 
+                -->
 
 
 
-                <h2>Board</h2>
+
+                <h2>Board Design &amp; Features</h2>
+
+
+
+                <h3>URL Design</h3>
+
+                <img src="url-design.png" alt="">
+
+                <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
+
+                <p>Every new board comes with a 6-character long unique alphanumeric string. The owners can add another custom slug which is not taken by another board and not used by other restricted Enboard URLs.</p>
+
+                <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
 
 
 
                 <h3>Header</h3>
 
-                <p>In the spirit of a <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a> inside board header there are two section. First one lists all information about board like title, description, number of followers, etc. Second one contains options associated with that board.</p>
+                <p>Loosely in the spirit of a <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a> &mdash; there are two sections inside board header. First one is mostly informational with things like board title, description, number of followers, etc. Second one contains options associated with that board.</p>
 
-                <p>Only exception is the follow button which I've included right after the board title because I wanted it to be more visible than the other options.</p>
+                <p>Only exception is the follow button which I've included right after the board title because I wanted it to be more visible and used more often than the other options.</p>
 
 
                 <h3>Layout</h3>
 
-                <p>To keep things simple and clean board is reduced to only essentials &mdash; items (with optional hover descriptions) organized through categories. That results in a glanceable and optimally packed content that can be quickly explored and accessed by users.</p>
+                <p>To keep things simple and clean, board is reduced to only essentials &mdash; items with optional hover descriptions organized through categories.</p>
 
-                <p>Board owners can easily edit categories and items placement thanks to drag and drop interface. Content addition is also almost effortless, link items have auto-filled titles and descriptions scraped from websites titles and descriptions.</p>
+                <p>That results in a glanceable and optimally packed content that can be quickly explored and accessed by users.</p>
+
+
+
+                <h3>Content Edition</h3>
+
+                <p>Adding new links is almost effortless, they have dynamically auto-filled titles and descriptions scraped from websites titles and descriptions.</p>
+
+                <p>Drag and drop interface lets board owners to easily edit placement of categories and items.</p>
 
 
 
@@ -222,42 +273,29 @@
 
                 <h3>Changelog</h3>
 
-                <p>When board owners add, modify or delete items it gets logged in the changelog that can be seen by anyone that can access board. Different types of logs have different icons and are color coded for quicker scanning when there's lot of them.</p>
+                <p>Items addition, modification or deletion gets logged in the changelog that can be seen by anyone with board access.</p>
 
-
-
-                <h3>URL Design</h3>
-
-                <img src="inline-img.png" alt="">
-
-                <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
-
-                <p>Every new board comes with 6-character long unique alphanumeric string. The owner can add second custom slug alias which is not taken by another board and not used by other restricted Enboard URLs.</p>
-
-                <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
+                <p>Different types of actions have different icons and are color coded for quicker scanning. Useful when there's lots of them.</p>
 
 
 
 
+
+
+                <hr>
 
 
             </div>
             <div class="blog__widescreen-flow">
 
-                <img src="dev-env-white.png" alt="">
+                <img src="dev-env-new.png" alt="">
 
-
-                <!--
-                <blockquote>
-                    <blockquote>
-                        <p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
-                        <footer><cite>Phil Karlton</cite></footer>
-                    </blockquote>
-                </blockquote>
-                -->
 
             </div>
             <div class="blog__normal-flow">
+
+
+
 
 
                 <h2>Technology &amp; Development</h2>
@@ -299,18 +337,20 @@
 
 
 
-
                 <h3>Front-End Structure &amp; Builds</h3>
 
 
                 <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
 
-                <p>My CSS preprocessor of choice is <a href="">Sass</a>. It let me to easily create custom color themes (with the help of mixins) and to have modular CSS structure based on <a href="" title="Block, Element, Modifier.">BEM methodology.</a> Along with Sass, I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
+                <p>My CSS preprocessor of choice is <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Thanks to its import feature it let me to have modular CSS structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
 
-                <p style="color:red;">JavaScript isn't something special, I have used </p>
+                <p>In addition I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
 
 
-                <h3>Color Themes</h3>
+
+                <h3>Board Themes</h3>
+
+                <img src="board-themes.png" alt="">
 
                 <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
 
@@ -321,49 +361,80 @@
                 <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
 
 
-                <h3>Counting number of shares</h3>
+                <hr>
 
-                <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs. Instead I've created custom sharing buttons that open sharing dialog in new popup window. Share count is displayed in a board header as a cumulative number updated every 6 hours from selected social networks, e.g. I don't count reddit upvotes as shares. That way I don't need to use any bloated iframes and limit network requests to minimum.</p>
+
 
 
                 <h2>Performance Optimizations</h2>
 
-                <p><strong>From the beginning I've wanted to make Enboard very fast.</strong> I've implemented couple of techniques that improved normal and perceived load times.</p>
 
-                <p>All relevant file extensions are cached and gzip compressed using Nginx and HTML pages are minified using Django bult-in filters.</p>
+                <p>From the beginning I've wanted to make Enboard very fast. I've implemented couple of techniques that improved normal and perceived load times.</p>
+
+
+            </div>
+            <div class="blog__widescreen-flow">
+
+                <blockquote>
+                    <blockquote>
+                        <p>"Speed is the most important feature. If your application is slow, people won’t use it."</p>
+                        <footer><cite>Fred Wilson in <a href="https://vimeo.com/10510576">"The 10 Golden Principles of Successful Web Apps"</a></cite></footer>
+                    </blockquote>
+                </blockquote>
+
+            </div>
+            <div class="blog__normal-flow">
+
+
+
+
+
+
+                <p>All relevant file extensions are cached and gzip compressed using Nginx and HTML pages are minified using Django bult-in filter.</p>
 
                 <p>Stylesheets and scripts are concatenated and minified using Gulp build into 3 files to reduce network requests &mdash; global stylesheet, dependency scripts and scripts controlling the application.</p>
 
 
-                <h3>Reducing Initial Server Response</h3>
 
-                <p>Bigger boards had a very long server response times because they contained a lot of items with many database relationships. I've solved that issue by loading items using AJAX after initial page load.</p>
+                <h3>Speeding Up Boards Perceived Loading Times</h3>
 
-                <p>To take things a step further I've also deferred other components like board creator data and changelog.</p>
+                <p>Bigger boards had a very long server response times because they contained a lot of items with many database relationships.
+
+                <p>I've solved that issue by getting items using AJAX after initial page load. While it didn't solve the response time issues, it made the first request for website look a lot faster.</p>
+
+                <p>To take things a step further I've also deferred other loadings like board creator and changelog.</p>
 
 
 
-                <h3>Lazy Font Loading</h3>
 
-                <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font (in this case Roboto) only after it's loaded. Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
+                <h3>Making Fonts Lazy &amp; Using Icon Fonts</h3>
+
+                <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font only after it's loaded.</p>
+
+                <p>Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
+
+                <p>While we are speaking about fonts, we may also speak about icon fonts.</p>
 
                 <aside>For generating icon fonts I've used <a href="">Fontastic</a>.</aside>
 
-                <p>While we are speaking about fonts, we may also speak about icon fonts. I've used entypo+ icons packaged as a font. This resulted in a only one ~13kb request for icons. This approach also made every icon crisp on high-density displays because they are vector based and let me easily customize their color on custom board themes.</p>
+                <p>I've used selected <a href="">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
 
 
-                <h3>Reducing Network Requests</h3>
+                <h3>Reducing Network Requests with Share Buttons</h3>
 
-                <aside>I didn't succeeded in completely eliminating 3rd party scripts since I'm using analytics tools like Google Analytics and HotJar.</aside>
+                <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="">HotJar</a> which require those.</aside>
 
-                <p>I've also tried to minimize 3rd party resources requests to minimum. That's why I don't use any social network widgets for share buttons. I've gone with more lightweight solution. My share buttons are just links to "sharer" urls that opens pop-up window with share dialog.</p>
+                <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs with their bloated scripts and iframes.</p>
+
+                <p>I've gone with more lightweight solution. I've used custom sharing buttons that open sharing dialog with "sharer" urls in new popup window.</p>
 
                 <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
 
-                <p>For displaying shares number I'm using custom Python script that counts shares using social networks APIs every 6 hours and updates database when that number has increased.</p>
+                <aside>E.g. I don't count reddit upvotes as shares.</aside>
 
+                <p>For displaying cumulative share numbers I've used custom back-end script that counts shares every 6 hours using selected APIs of social networks. The final share number is updated in database only when it's larger than preceding number.</p>
 
-
+                <hr>
 
 
 
@@ -373,16 +444,22 @@
 
                 <p>For tracking user bahavior and gathering feedback I'm using <a href="">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
 
-                <p>On Enboard I've used click heatmaps and user recordings to detect and solve usabilty issues and polls and surveys to gather feedback.</p>
+                <p>On Enboard click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
+
+
+                <hr>
 
 
 
 
                 <h2>Things That Should've Been</h2>
 
-                <p>Enboard obviously lacks some things. There's no proper landing page, no site-wide search, no profile pages and editing large boards needs some performance improvements.</p>
+                <p>Enboard obviously lacks some things. There's no proper landing page, no sitewide search, no profile pages and editing large boards needs some performance improvements.</p>
 
                 <p>I might implement them in future but right now I've had to stop working on Enboard and to focus on other things that are going in my life and on other projects.</p>
+
+
+                <hr>
 
 
                 <h2>Co-Founding</h2>
@@ -390,13 +467,8 @@
                 <p>If you are a business guy, marketing guy, front-end developer or Django developer &mdash; or even mix of those &mdash; and you would like to work on Enboard as a co-founder then please contact me.</p>
 
 
-            </div>
-            <div class="blog__widescreen-flow">
 
-                <img src="dev-env-cool.png" alt="">
-
-            </div>
-            <div class="blog__normal-flow">
+                <hr>
 
 
 
@@ -461,6 +533,7 @@
 
 
                 <h3>Tools</h3>
+                <ul>
                     <li><a href="">Photoshop</a></li>
                     <li><a href="">Fontastic</a></li>
                     <li><a href="">Real Favicon Generator</a></li>
@@ -491,9 +564,34 @@
 
                     <div class="author__heading">
 
-                        <div class="author__title">Dominik Serafin</div>
+                        <a href="/" class="author__title">Dominik Serafin</a>
 
-                        <div class="author__desc">Designer &amp; Full-Stack Developer.</div>
+                        <a href="/" class="author__desc">Product designer, front-end engineer and Django developer.</a>
+
+                        <div class="author__social-networks">
+
+                            <a href="https://twitter.com/SerafinDominik" class="author__social social-twitter" target="_blank"
+                            title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
+
+                            <a href="https://dribbble.com/DominikSerafin" class="author__social social-dribbble" target="_blank"
+                            title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
+
+                            <a href="https://www.behance.net/dominikserafin" class="author__social social-behance" target="_blank"
+                            title="Here I upload complete projects showcases.">&nbsp;</a>
+
+                            <a href="https://github.com/DominikSerafin/" class="author__social social-github" target="_blank"
+                            title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+
+                            <a href="https://angel.co/DominikSerafin" class="author__social social-angellist" target="_blank"
+                            title="You may find more information about me here.">&nbsp;</a>
+
+                            <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="author__social social-linkedin-1" target="_blank"
+                            title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
+
+                            <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+
+                        </div>
+
 
                     </div>
 

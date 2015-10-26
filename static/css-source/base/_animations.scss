@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    animations
+\*------------------------------------*/
+
+@keyframes swing {
+
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(1.5deg);
+    }
+
+    75% {
+        transform: rotateZ(-1.5deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+
+}
+
+@keyframes pop-swing {
+
+    0% {
+        transform: rotateZ(0deg) scale(1.07);
+    }
+
+    25% {
+        transform: rotateZ(1.5deg) scale(1.07);
+    }
+
+    75% {
+        transform: rotateZ(-1.5deg) scale(1.07);
+    }
+
+    100% {
+        transform: rotateZ(0deg) scale(1.07);
+    }
+
+}

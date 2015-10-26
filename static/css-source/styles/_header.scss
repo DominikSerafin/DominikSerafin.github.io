@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: middle;
 
-    border-bottom: 1px solid rgba(black,.05);
+    border-bottom: 1px solid rgba(black,.07);
 }
 
 
@@ -28,27 +28,7 @@
 .header__nav {
     display: inline-block;
     margin-top: 10px;
-    position: relative;
 
-    &::after {
-        position: absolute;
-        top: -4px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        content: "Coming Soon...";
-        line-height: 28px;
-        opacity: 0;
-        font-size: 14px;
-        color: white;
-        text-align: center;
-
-    }
-
-    &:hover::after {
-        opacity: 1;
-    }
 }
 
 
@@ -71,6 +51,32 @@
     transition: color 200ms ease-out;
     &:hover {
         color: rgba(black,.7);
+    }
+
+}
+
+
+.header__nav-link--created {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        left: -20%;
+        top: -10%;
+        width: 140%;
+        height: 120%;
+        background-color: black;
+        content: "Soon...";
+        line-height: 26px;
+        opacity: 0;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+
+    }
+
+    &:hover::after {
+        opacity: 1;
     }
 
 }

@@ -3,21 +3,21 @@
 \*------------------------------------*/
 
 .author {
-    padding: 100px 0;
-    margin-top: 100px;
-    border-top: 1px solid rgba(black,.05);
+    padding: 120px 0;
+    margin-top: 150px;
+    border-top: 1px solid rgba(black,.07);
 }
 
     .author__wrapper {
-        max-width: 680px;
+        max-width: 640px;
         margin: 0 auto;
         @include clearfix;
     }
 
 
     .author__image {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         border-radius: 200px;
         float: left;
         overflow: hidden;
@@ -26,20 +26,103 @@
     .author__heading {
         float: left;
         width: 400px;
+        margin-top: 15px;
         margin-left: 50px;
     }
 
         .author__title {
+            display: block;
             font-size: 34px;
             font-family: "Karla", sans-serif;
             font-weight: 700;
         }
 
         .author__desc {
+            display: block;
             font-size: 20px;
             color: gray;
+            margin-top: 5px;
         }
 
+
+.author__social-networks {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 18px;
+}
+.author__social {
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 17px;
+    color: rgba(black,.2);
+    vertical-align: top;
+    position: relative;
+
+    &.social-behance {
+        font-size: 20px;
+        top: -1px;
+    }
+
+
+    &.social-twitter:hover {
+        color: #55acee;
+    }
+
+    &.social-dribbble:hover {
+        color: #ea4c89;
+    }
+
+    &.social-behance:hover {
+        color: #1769ff;
+    }
+
+    &.social-github:hover {
+        color: #4183c4;
+    }
+
+    &.social-linkedin-1:hover {
+        color: #0077b5;
+    }
+
+
+    transition: color 200ms ease-out;
+    &:hover {
+        color: rgba(black,.7);
+    }
+
+
+    /*
+    &::after {
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #bbb;
+        content: attr(title);
+        color: white;
+        width: 500px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 2px;
+        padding: 5px 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms ease-out;
+    }
+
+
+    &:hover {
+        color: rgba(black,.3);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+    */
+
+
+}
 
 /*------------------------------------*\
     states

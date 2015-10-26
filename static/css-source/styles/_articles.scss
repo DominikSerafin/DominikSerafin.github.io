@@ -8,12 +8,21 @@
     display: block;
     max-width: 640px;
     margin: 0 auto;
+
+
+    hr {
+        display: block;
+        height: 1px;
+        background-color: rgba(black,.15);
+        margin: 160px 30% 100px 30%;
+    }
 }
 
 
     .articles__single {
         display: block;
-        margin-top: 120px;
+        padding-top: 160px;
+        padding-bottom: 60px;
     }
 
 
@@ -24,6 +33,11 @@
         color: rgba(black,.5);
     }
 
+
+
+
+
+
     .articles__title {
         display: block;
         font-family: "Karla", sans-serif;
@@ -32,6 +46,20 @@
         margin-bottom: 20px;
         line-height: 1.2;
         font-weight: 700;
+
+        transform: scale(1);
+        transition: transform 150ms ease-out;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+
+        div {
+        }
+
+        &:hover div {
+            animation: swing 500ms linear 0ms infinite;
+        }
     }
 
     .articles__desc {

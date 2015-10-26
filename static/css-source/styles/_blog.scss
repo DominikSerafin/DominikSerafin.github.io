@@ -22,11 +22,20 @@
 
 
 
+
 .blog__content {
 
 
+    hr {
+        display: block;
+        height: 1px;
+        background-color: rgba(black,.15);
+        margin: 160px 30% 100px 30%;
+    }
+
+
     header {
-        margin-top: 120px;
+        margin-top: 160px;
 
         time {
             font-family: "Karla", sans-serif;
@@ -82,7 +91,7 @@
     h4,
     h5,
     h6 {
-        font-size: 26px;
+        font-size: 24px;
         margin: 80px 0 25px 0;
     }
 
@@ -99,6 +108,40 @@
     }
 
 
+    abbr {
+        text-decoration: none;
+        border: none;
+
+        &::after {
+            content: "?";
+            font-size: 12px;
+            position: relative;
+            top: -9px;
+            font-weight: 500;
+            display: inline-block;
+            color: gray;
+
+            opacity: .3;
+
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+
+    }
+
+
+    hr {
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h6 {
+            margin-top: 160px;
+        }
+    }
+
 
 
     p {
@@ -111,41 +154,48 @@
         margin: 25px 0 25px 0;
 
         a {
-            @include cool-underline(gray, gray, white, 90%);
-            font-weight: 500;
+            @include cool-underline(gray, rgba(black,.3), white, 90%);
+            //font-weight: 500;
         }
 
     }
 
 
     img {
-        width: 100%;
+        display: block;
         max-width: 100%;
+        border-radius: 5px;
+        //box-shadow: 0 0 25px rgba(black,.01);
     }
 
+    .blog__widescreen-flow img {
+        width: 100%;
+        border-radius: none;
+        box-shadow: none;
+    }
 
 
     aside {
 
         a {
             @include cool-underline(gray, gray, white, 95%);
-            font-weight: 500;
+            //font-weight: 500;
         }
 
 
         font-family: "Work Sans", sans-serif;
         position: absolute;
-        left: -280px;
+        left: -285px;
         font-size: 16px;
         width: 250px;
         text-align: right;
         padding-top: 3px;
-        opacity: .5;
+        opacity: .2;
 
-        //transition: opacity 300ms ease-in-out;
-        //&:hover {
-        //opacity: .8;
-        //}
+        transition: opacity 300ms ease-in-out;
+        &:hover {
+            opacity: .8;
+        }
 
     }
 
@@ -171,10 +221,46 @@
         @extend p;
     }
 
-    ul,
-    ol
-    {
-        margin-left: 30px;
+    ul {
+        list-style-type: none;
+
+        li {
+            display: block;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        li::before {
+            width: 30px;
+            text-align: right;
+            font-weight: 500;
+            opacity: .3;
+            position: absolute;
+            left: 0;
+            content: "•";
+        }
+    }
+
+    ol {
+        counter-reset: ordered-item;
+        list-style-type: none;
+
+        li {
+            display: block;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        li::before {
+            width: 30px;
+            text-align: right;
+            font-weight: 500;
+            opacity: .5;
+            position: absolute;
+            left: 0;
+            content: counter(ordered-item) ".";
+            counter-increment: ordered-item;
+        }
     }
 
     strong {
@@ -183,37 +269,43 @@
 
 
     blockquote {
-        position: relative;
-        margin: 50px 0;
+        margin: 50px;
+        text-align: center;
 
         p {
-
             font-size: 28px;
             font-family: "Karla", sans-serif;
-            text-align: center;
             margin: 0;
         }
 
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 0px;
-            content: "\"";
-            font-size: 200px;
-            line-height: .7;
-            color: rgba(black,.05);
+        a {
+            @include cool-underline(rgba(black,.2), rgba(black,.2), white, 93%);
         }
 
 
 
         footer {
+            display: inline-block;
+            position: relative;
             margin: 0;
             padding: 0;
             border: 0;
-            font-size: 16px;
+            font-size: 20px;
             font-family: "Karla", sans-serif;
             text-align: center;
+            font-style: italic;
             color: rgba(black,.5);
+
+            &::before {
+                position: absolute;
+                top: 5px;
+                left: -50px;
+                content: "\”";
+                font-size: 100px;
+                line-height: .7;
+                color: rgba(black,.1);
+            }
+
         }
 
 
