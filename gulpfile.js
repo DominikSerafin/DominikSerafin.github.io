@@ -54,7 +54,7 @@ var sourcemaps    = require('gulp-sourcemaps');
 var serverconfig = {
   server: {
     baseDir: './',
-    directory: true
+    directory: false
   },
   open: false,
   ui: false,

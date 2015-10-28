@@ -38,7 +38,7 @@
         margin-top: 160px;
 
         time {
-            font-family: "Karla", sans-serif;
+            //font-family: "Karla", sans-serif;
             font-size: 16px;
             color: rgba(black,.5);
         }
@@ -69,7 +69,7 @@
     h4,
     h5,
     h6 {
-        font-family: "Karla", sans-serif;
+        //font-family: "Karla", sans-serif;
         font-weight: 700;
 
     }
@@ -119,11 +119,13 @@
             top: -9px;
             font-weight: 500;
             display: inline-block;
-            color: gray;
+            color: #222;
 
+            transition: opacity 300ms ease-in-out;
             opacity: .3;
 
         }
+
 
         &:hover::after {
             opacity: 1;
@@ -144,10 +146,24 @@
 
 
 
+    /*
+    a {
+
+        //transition: color 300ms ease-in-out, background-image 300ms ease-in-out;
+
+        &:hover {
+            background-image: linear-gradient(to right, #222, #222);
+            color: #222;
+        }
+
+    }
+    */
+
+
     p {
 
 
-        font-family: "Work Sans", sans-serif;
+        //font-family: "Work Sans", sans-serif;
         font-size: 20px;
         line-height: 1.45;
         color: rgb(100,100,100);
@@ -183,7 +199,7 @@
         }
 
 
-        font-family: "Work Sans", sans-serif;
+        //font-family: "Work Sans", sans-serif;
         position: absolute;
         left: -285px;
         font-size: 16px;
@@ -191,6 +207,8 @@
         text-align: right;
         padding-top: 3px;
         opacity: .2;
+
+        //font-weight: 300;
 
         transition: opacity 300ms ease-in-out;
         &:hover {
@@ -274,8 +292,10 @@
 
         p {
             font-size: 28px;
-            font-family: "Karla", sans-serif;
+            //font-family: "Karla", sans-serif;
+            color: rgba(black,.8);
             margin: 0;
+            font-weight: 500;
         }
 
         a {
@@ -291,17 +311,17 @@
             padding: 0;
             border: 0;
             font-size: 20px;
-            font-family: "Karla", sans-serif;
+            //font-family: "Karla", sans-serif;
             text-align: center;
             font-style: italic;
             color: rgba(black,.5);
 
             &::before {
                 position: absolute;
-                top: 5px;
+                top: 10px;
                 left: -50px;
                 content: "\”";
-                font-size: 100px;
+                font-size: 90px;
                 line-height: .7;
                 color: rgba(black,.1);
             }
