@@ -62,6 +62,20 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
+    <!-- Font Observer -->
+    <script type="text/javascript">
+        (function(){'use strict';function f(a){function b(){document.body?a():setTimeout(b,0)}b()};function h(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.g=document.createElement("span");this.f=-1;this.b.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";this.c.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";this.g.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";this.h.style.cssText="display:inline-block;width:200%;height:200%;";this.b.appendChild(this.h);this.c.appendChild(this.g);this.a.appendChild(this.b);this.a.appendChild(this.c)}function p(a,b,c){a.a.style.cssText="min-width:20px;min-height:20px;display:inline-block;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font-size:100px;font-family:"+b+";"+c}function u(a){var b=a.a.offsetWidth,c=b+100;a.g.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.f!==b?(a.f=b,!0):!1}function v(a,b){a.b.addEventListener("scroll",function(){u(a)&&null!==a.a.parentNode&&b(a.f)},!1);a.c.addEventListener("scroll",function(){u(a)&&null!==a.a.parentNode&&b(a.f)},!1);u(a)};var A=[];function B(a){A.push(a);1===A.length&&C()}function D(){for(;A.length;)A[0](),A.shift()}if(window.MutationObserver){var E=document.createElement("div");(new MutationObserver(D)).observe(E,{attributes:!0});var C=function(){E.setAttribute("x",0)}}else C=function(){setTimeout(D)};function F(a){this.a=G;this.b=void 0;this.c=[];var b=this;try{a(function(a){b.resolve(a)},function(a){b.reject(a)})}catch(c){b.reject(c)}}var G=2;function H(a){return new F(function(b,c){c(a)})}function I(a){return new F(function(b){b(a)})}F.prototype.resolve=function(a){var b=this;if(b.a===G){if(a===b)throw new TypeError("Promise settled with itself.");var c=!1;try{var e=a&&a.then;if(null!==a&&"object"===typeof a&&"function"===typeof e){e.call(a,function(a){c||b.resolve(a);c=!0},function(a){c||b.reject(a);c=!0});return}}catch(d){c||b.reject(d);return}b.a=0;b.b=a;J(b)}};F.prototype.reject=function(a){if(this.a===G){if(a===this)throw new TypeError("Promise settled with itself.");this.a=1;this.b=a;J(this)}};function J(a){B(function(){if(a.a!==G)for(;a.c.length;){var b=a.c.shift(),c=b[0],e=b[1],d=b[2],b=b[3];try{0===a.a?"function"===typeof c?d(c.call(void 0,a.b)):d(a.b):1===a.a&&("function"===typeof e?d(e.call(void 0,a.b)):b(a.b))}catch(g){b(g)}}})}F.prototype.catch=function(a){return this.then(void 0,a)};F.prototype.then=function(a,b){var c=this;return new F(function(e,d){c.c.push([a,b,e,d]);J(c)})};function K(a){return new F(function(b,c){function e(c){return function(e){g[c]=e;d+=1;d===a.length&&b(g)}}var d=0,g=[];0===a.length&&b(g);for(var k=0;k<a.length;k+=1)a[k].then(e(k),c)})}function L(a){return new F(function(b,c){for(var e=0;e<a.length;e+=1)a[e].then(b,c)})}if(window.Promise){var M=window.Promise;M.prototype.then=window.Promise.prototype.then;M.prototype.catch=window.Promise.prototype["catch"];M.all=window.Promise.all;M.race=window.Promise.race;M.resolve=window.Promise.resolve;M.reject=window.Promise.reject}else M=F,M.prototype.then=F.prototype.then,M.prototype.catch=F.prototype.catch,M.all=K,M.race=L,M.resolve=I,M.reject=H;function N(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.variant=c.variant||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"stretch";this.featureSettings=c.featureSettings||"normal"}var O=null;N.prototype.a=function(a,b){var c=a||"BESbswy",e=b||3E3,d="font-style:"+this.style+";font-variant:"+this.variant+";font-weight:"+this.weight+";font-stretch:"+this.stretch+";font-feature-settings:"+this.featureSettings+";-moz-font-feature-settings:"+this.featureSettings+";-webkit-font-feature-settings:"+this.featureSettings+";",g=document.createElement("div"),k=new h(c),q=new h(c),r=new h(c),l=-1,m=-1,n=-1,w=-1,x=-1,y=-1,t=this;return new M(function(a,b){function c(){null!==g.parentNode&&g.parentNode.removeChild(g)}function z(){if(-1!==l&&-1!==m||-1!==l&&-1!==n||-1!==m&&-1!==n)if(l===m||l===n||m===n){if(null===O){var b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent);O=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))}O?l===w&&m===w&&n===w||l===x&&m===x&&n===x||l===y&&m===y&&n===y||(c(),a(t)):(c(),a(t))}}f(function(){function a(){if(Date.now()-P>=e)c(),b(t);else{var d=document.hidden;if(!0===d||void 0===d)l=k.a.offsetWidth,m=q.a.offsetWidth,n=r.a.offsetWidth,z();setTimeout(a,50)}}var P=Date.now();p(k,"sans-serif",d);p(q,"serif",d);p(r,"monospace",d);g.appendChild(k.a);g.appendChild(q.a);g.appendChild(r.a);document.body.appendChild(g);w=k.a.offsetWidth;x=q.a.offsetWidth;y=r.a.offsetWidth;a();v(k,function(a){l=a;z()});p(k,t.family+",sans-serif",d);v(q,function(a){m=a;z()});p(q,t.family+",serif",d);v(r,function(a){n=a;z()});p(r,t.family+",monospace",d)})})};window.FontFaceObserver=N;window.FontFaceObserver.prototype.check=N.prototype.a;}());
+
+        function addClass(el, className) {
+            if (el.classList) el.classList.add(className);
+            else if (!hasClass(el, className)) el.className += ' ' + className;
+        }
+        var observer = new FontFaceObserver('Roboto', {});
+        observer.check().then(function(){
+            addClass(document.querySelector('html'), 'font-loaded');
+        });
+
+    </script>
 
     <!-- Scripts preload -->
     <!-- <script src="" type="text/javascript"></script> -->
@@ -74,591 +88,589 @@
 <body>
 
 
-    <div id="smooth-state">
+
+    <header class="header">
+
+        <div>
+
+            <a class="header__title" href="/">Dominik Serafin</a>
+
+
+            <div class="header__social-networks">
+
+                <a href="https://twitter.com/SerafinDominik" class="header__social social-twitter" target="_blank"
+                title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
+
+                <a href="https://dribbble.com/DominikSerafin" class="header__social social-dribbble" target="_blank"
+                title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
+
+                <a href="https://www.behance.net/dominikserafin" class="header__social social-behance" target="_blank"
+                title="Here I upload complete projects showcases.">&nbsp;</a>
+
+                <a href="https://github.com/DominikSerafin/" class="header__social social-github" target="_blank"
+                title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+
+                <a href="https://angel.co/DominikSerafin" class="header__social social-angellist" target="_blank"
+                title="You may find more information about me here.">&nbsp;</a>
+
+                <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="header__social social-linkedin-1" target="_blank"
+                title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
+
+                <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+
+            </div>
+
+        </div>
 
 
 
-        <header class="header">
-
-            <div>
-
-                <a class="header__title" href="/">Dominik Serafin</a>
 
 
-                <div class="header__social-networks">
 
-                    <a href="https://twitter.com/SerafinDominik" class="header__social social-twitter" target="_blank"
-                    title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
 
-                    <a href="https://dribbble.com/DominikSerafin" class="header__social social-dribbble" target="_blank"
-                    title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
 
-                    <a href="https://www.behance.net/dominikserafin" class="header__social social-behance" target="_blank"
-                    title="Here I upload complete projects showcases.">&nbsp;</a>
+        <div class="header__nav">
 
-                    <a href="https://github.com/DominikSerafin/" class="header__social social-github" target="_blank"
-                    title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+            <div class="header__nav-title">Things That I Have &mdash;</div>
+            <div class="header__nav-link header__nav-link--created">Created</div>
+            <a href="../../articles/" class="header__nav-link" title="Well... technically they are also created.">Wrote</a>
 
-                    <a href="https://angel.co/DominikSerafin" class="header__social social-angellist" target="_blank"
-                    title="You may find more information about me here.">&nbsp;</a>
+        </div>
 
-                    <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="header__social social-linkedin-1" target="_blank"
-                    title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
 
-                    <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+
+    </header>
+
+
+
+
+    <main class="blog__content">
+
+
+        <div class="blog__normal-flow">
+
+
+            <header>
+                <time datetime="2015-10-20T15:35Z">20 October, 2015 at 15:35</time>
+
+                <h1>How I've created Enboard &mdash; a case study</h1>
+
+                <p>If you want to know how to create application such as <a href="http://enboard.co/">Enboard</a> or you're interested in my workflow then you should read this.</p>
+
+                <p>This article consists of two parts. First is about design and second is about technical matters. If you aren't interested in design then just skip that part.</p>
+
+                <p>I want to point out that it's my first ever written article and it won't be perfect (English is my second language) and not as complete as I would like it to be.</p>
+
+            </header>
+
+
+            <hr>
+
+
+
+        </div>
+        <div class="blog__widescreen-flow">
+
+            <img src="history.png" alt="">
+
+
+        </div>
+        <div class="blog__normal-flow">
+
+
+
+
+
+
+
+            <h2>History and Idea</h2>
+
+            <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with a browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like <a href="http://enboard.co/webdesign/" target="_blank">Delicious</a> etc. but unfortunately nothing cut it for me.</p>
+
+            <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn" target="_blank">exists</a>, btw.</aside>
+
+            <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. I've named it DopeLists.com and at the beginning it was only about <a href="http://enboard.co/webdesign/" target="_blank">web design</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/" target="_blank">front-end</a>, <a href="http://enboard.co/afterformat/" target="_blank">after format</a> and <a href="http://enboard.co/usefulwebsites/" target="_blank">general websites</a>.</p>
+
+            <aside>Don't ask me why I've changed name so often. I don't remember it myself.</aside>
+
+            <p>I've later redesigned and refactored it a bit, because of bad markup decisions and time-wasting way of adding new links. Name was also changed (again) to Beaqn.in.</p>
+
+            <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions.</p>
+
+            <p>Among the user feedback there were many questions if Beaqn source code could be used for their own lists. That's how I've got an idea to create such web app where people could do exactly that, but without messing in code.</p>
+
+
+
+
+
+            <hr>
+
+
+
+
+        </div>
+        <div class="blog__widescreen-flow">
+
+            <img src="boards.png" alt="">
+
+
+        </div>
+        <div class="blog__normal-flow">
+
+
+            <!--
+            <h2>Structure</h2>
+
+            <p>It's nothing complex really. Enboard basically consists of user dashboard, boards and collections of boards.</p>
+
+
+            <h3>Dashboard</h3>
+
+            <p>Dashboard is split into two pieces. First one is for logged users where they can see their own boards, boards that they follow and "Discover" tab with boards collections on specific subjects.</p>
+
+            <p>Second one is a view for users without account. It consists of mentioned earlier "Discover" tab and mini landing page with registration form.</p>
+
+            -->
+
+
+
+
+            <h2>Board Design &amp; Features</h2>
+
+
+
+            <h3>URL Design</h3>
+
+            <img src="urls.png" alt="">
+
+            <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
+
+            <p>Every new board comes with a 6-character long unique alphanumeric string. The owners can add another custom slug which is not taken by another board and not used by other restricted Enboard URLs.</p>
+
+            <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
+
+
+
+            <h3>Header</h3>
+
+            <p>Loosely in the spirit of a <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a> &mdash; there are two sections inside board header. First one is mostly informational with things like board title, description, number of followers, etc. Second one contains options associated with that board.</p>
+
+            <p>Only exception is the follow button which I've included right after the board title because I wanted it to be more visible and used more often than the other options.</p>
+
+
+            <h3>Layout</h3>
+
+            <p>To keep things simple and clean, board is reduced to only essentials &mdash; items with optional hover descriptions organized through categories.</p>
+
+            <p>That results in a glanceable and optimally packed content that can be quickly explored and accessed by users.</p>
+
+
+
+            <h3>Content Edition</h3>
+
+            <p>Adding new links is almost effortless, they have dynamically auto-filled titles and descriptions scraped from websites titles and descriptions.</p>
+
+            <p>Drag and drop interface lets board owners to easily edit placement of categories and items.</p>
+
+
+
+            <h3>Search</h3>
+
+            <p>Every board have a search functionality. It basically works like a browser find feature (this little thing activated with CMD+F) but with one difference &mdash; boxes that don't match search results are hidden.</p>
+
+
+            <h3>Suggestions</h3>
+
+            <p>Everyone can make suggestions to public boards. Boards owners are notified when suggestion is sent and then can review and delete them. Suggestions are also automatically marked for read and unread.</p>
+
+
+            <h3>Changelog</h3>
+
+            <p>Items addition, modification or deletion gets logged in the changelog that can be seen by anyone with board access.</p>
+
+            <p>Different types of actions have different icons and are color coded for quicker scanning. Useful when there's lots of them.</p>
+
+
+
+
+
+
+            <hr>
+
+
+        </div>
+        <div class="blog__widescreen-flow">
+
+            <img src="devenv.png" alt="">
+
+
+        </div>
+        <div class="blog__normal-flow">
+
+
+
+
+
+            <h2>Technology &amp; Development</h2>
+
+
+            <h3>Server Set-Up</h3>
+
+            <aside>
+                I was considering using similar <a href="https://www.digitalocean.com/">DigitalOcean</a> but Linode looked more mature and trustworthy.
+            </aside>
+
+            <p>All the application code, static files and PostgreSQL databases are hosted on a Ubuntu 14.04 <a href="https://www.linode.com/">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
+
+            <p>For web server I've chosen Nginx because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a server for static files.</p>
+
+            <p><a href="http://upstart.ubuntu.com/">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
+
+            <p>In addition I'm using <a href="https://www.cloudflare.com/">CloudFlare</a>, which is basically a plug-and-play location sensitive <abbr title="Content Delivery Network">CDN</abbr>, cache, security protection and some other things. It also lets visitor know when the website is down.</p>
+
+
+
+
+            <h3>Deployment</h3>
+
+            <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> repository and pull them from Linode server.</p>
+
+            <p><strong>My usual deployment flow looked like this:</strong></p>
+
+            <ol>
+                <li>Update code and merge GIT branches.</li>
+                <li>Change static files versions using GET <code>?v=</code> parameter at the end of links to files so that end users will get fresh styles and scripts.</li>
+                <li><code>git push</code> from local development set-up.</li>
+                <li><code>git pull</code> inside server.</li>
+                <li>Database migration &mdash; if necessary.</li>
+                <li>Static files collect.</li>
+                <li>CloudFlare cache clear.</li>
+                <li>Application restart.</li>
+            </ol>
+
+
+
+            <h3>Front-End Structure &amp; Builds</h3>
+
+
+            <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
+
+            <p>My CSS preprocessor of choice is <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Thanks to its import feature it let me to have modular CSS structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
+
+            <p>In addition I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
+
+            <p>All the CSS and JavaScript is built using Gulp.</p>
+
+
+
+            <h3>Board Themes</h3>
+
+            <img src="themes.png" alt="">
+
+            <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
+
+            <aside>
+                Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
+            </aside>
+
+            <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
+
+
+            <hr>
+
+
+
+
+            <h2>Performance Optimizations</h2>
+
+
+            <p>From the beginning I've wanted to make Enboard very fast. I've implemented couple of techniques that improved normal and perceived load times.</p>
+
+
+        </div>
+        <div class="blog__widescreen-flow">
+
+            <blockquote>
+
+                <p>"Speed is the most important feature. If your application is slow, people won’t use it."</p>
+
+                <footer>
+                    <cite>Fred Wilson in <a href="https://vimeo.com/10510576">"The 10 Golden Principles of Successful Web Apps"</a>
+                    </cite>
+                </footer>
+
+            </blockquote>
+
+        </div>
+        <div class="blog__normal-flow">
+
+
+
+
+
+
+            <p>All relevant file extensions are cached and gzip compressed using Nginx and HTML pages are minified using Django bult-in filter.</p>
+
+            <p>Stylesheets and scripts are concatenated and minified using Gulp build into 3 files to reduce network requests &mdash; global stylesheet, dependency scripts and scripts controlling the application.</p>
+
+
+
+            <h3>Speeding Up Boards Perceived Loading Times</h3>
+
+            <p>Bigger boards had a very long server response times because they contained a lot of items with many database relationships.
+
+            <p>I've solved that issue by getting items using AJAX after initial page load. While it didn't solve the response time issues, it made the first request for website look a lot faster.</p>
+
+            <p>To take things a step further I've also deferred other loadings like board creator and changelog.</p>
+
+
+
+
+            <h3>Making Fonts Lazy &amp; Using Icon Fonts</h3>
+
+            <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font only after it's loaded.</p>
+
+            <p>Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
+
+            <p>While we are speaking about fonts, we may also speak about icon fonts.</p>
+
+            <aside>For generating icon fonts I've used <a href="">Fontastic</a>.</aside>
+
+            <p>I've used selected <a href="">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
+
+
+            <h3>Reducing Network Requests with Share Buttons</h3>
+
+            <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="">HotJar</a> which require those.</aside>
+
+            <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs with their bloated scripts and iframes.</p>
+
+            <p>I've gone with more lightweight solution. I've used custom sharing buttons that open sharing dialog with "sharer" urls in new popup window.</p>
+
+            <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
+
+            <aside>E.g. I don't count reddit upvotes as shares.</aside>
+
+            <p>For displaying cumulative share numbers I've used custom back-end script that counts shares every 6 hours using selected APIs of social networks. The final share number is updated in database only when it's larger than preceding number.</p>
+
+            <hr>
+
+
+
+            <h2>Analytics &amp; User Feedback</h2>
+
+            <p>For tracking traffic and other stats I'm just using the ol' plain <a href="">Google Analytics</a>.</p>
+
+            <p>For tracking user bahavior and gathering feedback I'm using <a href="">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
+
+            <p>On Enboard click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
+
+
+            <hr>
+
+
+
+
+            <h2>Things That Should've Been</h2>
+
+            <p>Enboard obviously lacks some things. There's no proper landing page, no sitewide search, no profile pages and editing large boards needs some performance improvements.</p>
+
+            <p>I might implement them in future but right now I've had to stop working on Enboard and to focus on other things that are going in my life and on other projects.</p>
+
+
+            <hr>
+
+
+            <h2>Co-Founding</h2>
+
+            <p>If you are a business guy, marketing guy, front-end developer or Django developer &mdash; or even mix of those &mdash; and you would like to work on Enboard as a co-founder then please contact me.</p>
+
+
+
+            <hr>
+
+
+
+            <h2>Resources</h2>
+
+            <p>Enboard couldn't be made single-handedly in such a short span amount of time without articles, libraries, tools and services listed below.</p>
+
+
+
+
+            <h3>Articles</h3>
+            <ul>
+                <li><a href="https://www.filamentgroup.com/lab/font-events.html">Font Loading Revisited with Font Events</a> by filament group</li>
+                <li><a href="http://adambeagle.com/blog/deploying-django-17-ubuntu/">Deploying Django 1.7 on Ubuntu with DigitalOcean</a> by Adam Beagle</li>
+            </ul>
+
+
+
+            <h3>Design</h3>
+            <ul>
+                <li><a href="">Roboto</a></li>
+                <li><a href="">entypo+</a></li>
+            </ul>
+
+
+            <h3>Front-End</h3>
+            <ul>
+                <li><a href="">Gulp</a></li>
+                <li><a href="">Sass</a></li>
+                <li><a href="">Autoprefixer</a></li>
+                <li><a href="">jQuery</a> + <a href="">jQuery UI</a></li>
+                <li><a href="https://github.com/bramstein/fontfaceobserver">Font Observer</a></li>
+            </ul>
+
+
+
+
+            <h3>Back-End</h3>
+            <ul>
+                <li><a href="">Nginx</a></li>
+                <li><a href="">Gunicorn</a></li>
+                <li><a href="">Python</a></li>
+                <li><a href="">Django</a></li>
+                <li><a href="">django-allauth</a></li>
+            </ul>
+
+
+
+
+            <h3>Services</h3>
+            <ul>
+                <li><a href="">Linode</a></li>
+                <li><a href="">BitBucket</a></li>
+                <li><a href="">CloudFlare</a></li>
+                <li><a href="">SendGrid</a></li>
+                <li><a href="">Google Analytics</a></li>
+                <li><a href="">HotJar</a></li>
+                <li><a href="">Google Fonts</a></li>
+            </ul>
+
+
+
+
+            <h3>Tools</h3>
+            <ul>
+                <li><a href="">Photoshop</a></li>
+                <li><a href="">Fontastic</a></li>
+                <li><a href="">Real Favicon Generator</a></li>
+                <li><a href="">TinyPNG</a></li>
+                <li><a href="">PuTTY</a></li>
+                <li><a href="">WinSCP</a></li>
+            <ul>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div class="author">
+            <div class="author__wrapper">
+
+                <div class="author__image">
+                    <img src="https://pbs.twimg.com/profile_images/648220964853977089/HBaHWSKw.png" alt="">
+                </div>
+
+                <div class="author__heading">
+
+                    <a href="/" class="author__title">Dominik Serafin</a>
+
+                    <a href="/" class="author__desc">Product designer, front-end engineer and Django developer.</a>
+
+                    <div class="author__social-networks">
+
+                        <a href="https://twitter.com/SerafinDominik" class="author__social social-twitter" target="_blank"
+                        title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
+
+                        <a href="https://dribbble.com/DominikSerafin" class="author__social social-dribbble" target="_blank"
+                        title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
+
+                        <a href="https://www.behance.net/dominikserafin" class="author__social social-behance" target="_blank"
+                        title="Here I upload complete projects showcases.">&nbsp;</a>
+
+                        <a href="https://github.com/DominikSerafin/" class="author__social social-github" target="_blank"
+                        title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
+
+                        <a href="https://angel.co/DominikSerafin" class="author__social social-angellist" target="_blank"
+                        title="You may find more information about me here.">&nbsp;</a>
+
+                        <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="author__social social-linkedin-1" target="_blank"
+                        title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
+
+                        <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
+
+                    </div>
+
 
                 </div>
 
-            </div>
-
-
-
-
-
-
-
-
-            <div class="header__nav">
-
-                <div class="header__nav-title">Things That I Have &mdash;</div>
-                <div class="header__nav-link header__nav-link--created">Created</div>
-                <a href="../../articles/" class="header__nav-link" title="Well... technically they are also created.">Wrote</a>
 
             </div>
+        </div>
 
 
 
-        </header>
 
+        <div id="disqus_thead_container">
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                /*
+                var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
 
+                    s.src = '//dominikserafin.disqus.com/embed.js';
 
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
 
-        <main class="blog__content">
 
 
-            <div class="blog__normal-flow">
+    </main>
 
 
-                <header>
-                    <time datetime="2015-10-20T15:35Z">20 October, 2015 at 15:35</time>
 
-                    <h1>How I've created Enboard &mdash; a case study</h1>
 
-                    <p>If you want to know how to create application such as <a href="http://enboard.co/">Enboard</a> or you're interested in my workflow then you should read this.</p>
 
-                    <p>This article consists of two parts. First is about design and second is about technical matters. If you aren't interested in design then just skip that part.</p>
 
-                    <p>I want to point out that it's my first ever written article and it won't be perfect (English is my second language) and not as complete as I would like it to be.</p>
 
-                </header>
 
 
-                <hr>
 
 
 
-            </div>
-            <div class="blog__widescreen-flow">
 
-                <img src="history.png" alt="">
 
 
-            </div>
-            <div class="blog__normal-flow">
 
+    <footer class="footer">
+        <p>This isn't the state-of-the-art design because I've more interesting projects in works than my personal website.</p>
+        <p>Cookies are used here. Dominik Serafin &copy; 2015. All Rights Reserved.</p>
+    </footer>
 
 
-
-
-
-
-                <h2>History and Idea</h2>
-
-                <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with a browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like <a href="http://enboard.co/webdesign/" target="_blank">Delicious</a> etc. but unfortunately nothing cut it for me.</p>
-
-                <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn" target="_blank">exists</a>, btw.</aside>
-
-                <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. I've named it DopeLists.com and at the beginning it was only about <a href="http://enboard.co/webdesign/" target="_blank">web design</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/" target="_blank">front-end</a>, <a href="http://enboard.co/afterformat/" target="_blank">after format</a> and <a href="http://enboard.co/usefulwebsites/" target="_blank">general websites</a>.</p>
-
-                <aside>Don't ask me why I've changed name so often. I don't remember it myself.</aside>
-
-                <p>I've later redesigned and refactored it a bit, because of bad markup decisions and time-wasting way of adding new links. Name was also changed (again) to Beaqn.in.</p>
-
-                <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions.</p>
-
-                <p>Among the user feedback there were many questions if Beaqn source code could be used for their own lists. That's how I've got an idea to create such web app where people could do exactly that, but without messing in code.</p>
-
-
-
-
-
-                <hr>
-
-
-
-
-            </div>
-            <div class="blog__widescreen-flow">
-
-                <img src="boards.png" alt="">
-
-
-            </div>
-            <div class="blog__normal-flow">
-
-
-                <!--
-                <h2>Structure</h2>
-
-                <p>It's nothing complex really. Enboard basically consists of user dashboard, boards and collections of boards.</p>
-
-
-                <h3>Dashboard</h3>
-
-                <p>Dashboard is split into two pieces. First one is for logged users where they can see their own boards, boards that they follow and "Discover" tab with boards collections on specific subjects.</p>
-
-                <p>Second one is a view for users without account. It consists of mentioned earlier "Discover" tab and mini landing page with registration form.</p>
-
-                -->
-
-
-
-
-                <h2>Board Design &amp; Features</h2>
-
-
-
-                <h3>URL Design</h3>
-
-                <img src="urls.png" alt="">
-
-                <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
-
-                <p>Every new board comes with a 6-character long unique alphanumeric string. The owners can add another custom slug which is not taken by another board and not used by other restricted Enboard URLs.</p>
-
-                <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
-
-
-
-                <h3>Header</h3>
-
-                <p>Loosely in the spirit of a <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a> &mdash; there are two sections inside board header. First one is mostly informational with things like board title, description, number of followers, etc. Second one contains options associated with that board.</p>
-
-                <p>Only exception is the follow button which I've included right after the board title because I wanted it to be more visible and used more often than the other options.</p>
-
-
-                <h3>Layout</h3>
-
-                <p>To keep things simple and clean, board is reduced to only essentials &mdash; items with optional hover descriptions organized through categories.</p>
-
-                <p>That results in a glanceable and optimally packed content that can be quickly explored and accessed by users.</p>
-
-
-
-                <h3>Content Edition</h3>
-
-                <p>Adding new links is almost effortless, they have dynamically auto-filled titles and descriptions scraped from websites titles and descriptions.</p>
-
-                <p>Drag and drop interface lets board owners to easily edit placement of categories and items.</p>
-
-
-
-                <h3>Search</h3>
-
-                <p>Every board have a search functionality. It basically works like a browser find feature (this little thing activated with CMD+F) but with one difference &mdash; boxes that don't match search results are hidden.</p>
-
-
-                <h3>Suggestions</h3>
-
-                <p>Everyone can make suggestions to public boards. Boards owners are notified when suggestion is sent and then can review and delete them. Suggestions are also automatically marked for read and unread.</p>
-
-
-                <h3>Changelog</h3>
-
-                <p>Items addition, modification or deletion gets logged in the changelog that can be seen by anyone with board access.</p>
-
-                <p>Different types of actions have different icons and are color coded for quicker scanning. Useful when there's lots of them.</p>
-
-
-
-
-
-
-                <hr>
-
-
-            </div>
-            <div class="blog__widescreen-flow">
-
-                <img src="devenv.png" alt="">
-
-
-            </div>
-            <div class="blog__normal-flow">
-
-
-
-
-
-                <h2>Technology &amp; Development</h2>
-
-
-                <h3>Server Set-Up</h3>
-
-                <aside>
-                    I was considering using similar <a href="https://www.digitalocean.com/">DigitalOcean</a> but Linode looked more mature and trustworthy.
-                </aside>
-
-                <p>All the application code, static files and PostgreSQL databases are hosted on a Ubuntu 14.04 <a href="https://www.linode.com/">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
-
-                <p>For web server I've chosen Nginx because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a server for static files.</p>
-
-                <p><a href="http://upstart.ubuntu.com/">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
-
-                <p>In addition I'm using <a href="https://www.cloudflare.com/">CloudFlare</a>, which is basically a plug-and-play location sensitive <abbr title="Content Delivery Network">CDN</abbr>, cache, security protection and some other things. It also lets visitor know when the website is down.</p>
-
-
-
-
-                <h3>Deployment</h3>
-
-                <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> repository and pull them from Linode server.</p>
-
-                <p><strong>My usual deployment flow looked like this:</strong></p>
-
-                <ol>
-                    <li>Update code and merge GIT branches.</li>
-                    <li>Change static files versions using GET <code>?v=</code> parameter at the end of links to files so that end users will get fresh styles and scripts.</li>
-                    <li><code>git push</code> from local development set-up.</li>
-                    <li><code>git pull</code> inside server.</li>
-                    <li>Database migration &mdash; if necessary.</li>
-                    <li>Static files collect.</li>
-                    <li>CloudFlare cache clear.</li>
-                    <li>Application restart.</li>
-                </ol>
-
-
-
-                <h3>Front-End Structure &amp; Builds</h3>
-
-
-                <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
-
-                <p>My CSS preprocessor of choice is <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Thanks to its import feature it let me to have modular CSS structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
-
-                <p>In addition I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
-
-                <p>All the CSS and JavaScript is built using Gulp.</p>
-
-
-
-                <h3>Board Themes</h3>
-
-                <img src="themes.png" alt="">
-
-                <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
-
-                <aside>
-                    Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
-                </aside>
-
-                <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
-
-
-                <hr>
-
-
-
-
-                <h2>Performance Optimizations</h2>
-
-
-                <p>From the beginning I've wanted to make Enboard very fast. I've implemented couple of techniques that improved normal and perceived load times.</p>
-
-
-            </div>
-            <div class="blog__widescreen-flow">
-
-                <blockquote>
-                    <blockquote>
-                        <p>"Speed is the most important feature. If your application is slow, people won’t use it."</p>
-                        <footer><cite>Fred Wilson in <a href="https://vimeo.com/10510576">"The 10 Golden Principles of Successful Web Apps"</a></cite></footer>
-                    </blockquote>
-                </blockquote>
-
-            </div>
-            <div class="blog__normal-flow">
-
-
-
-
-
-
-                <p>All relevant file extensions are cached and gzip compressed using Nginx and HTML pages are minified using Django bult-in filter.</p>
-
-                <p>Stylesheets and scripts are concatenated and minified using Gulp build into 3 files to reduce network requests &mdash; global stylesheet, dependency scripts and scripts controlling the application.</p>
-
-
-
-                <h3>Speeding Up Boards Perceived Loading Times</h3>
-
-                <p>Bigger boards had a very long server response times because they contained a lot of items with many database relationships.
-
-                <p>I've solved that issue by getting items using AJAX after initial page load. While it didn't solve the response time issues, it made the first request for website look a lot faster.</p>
-
-                <p>To take things a step further I've also deferred other loadings like board creator and changelog.</p>
-
-
-
-
-                <h3>Making Fonts Lazy &amp; Using Icon Fonts</h3>
-
-                <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font only after it's loaded.</p>
-
-                <p>Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
-
-                <p>While we are speaking about fonts, we may also speak about icon fonts.</p>
-
-                <aside>For generating icon fonts I've used <a href="">Fontastic</a>.</aside>
-
-                <p>I've used selected <a href="">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
-
-
-                <h3>Reducing Network Requests with Share Buttons</h3>
-
-                <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="">HotJar</a> which require those.</aside>
-
-                <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs with their bloated scripts and iframes.</p>
-
-                <p>I've gone with more lightweight solution. I've used custom sharing buttons that open sharing dialog with "sharer" urls in new popup window.</p>
-
-                <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
-
-                <aside>E.g. I don't count reddit upvotes as shares.</aside>
-
-                <p>For displaying cumulative share numbers I've used custom back-end script that counts shares every 6 hours using selected APIs of social networks. The final share number is updated in database only when it's larger than preceding number.</p>
-
-                <hr>
-
-
-
-                <h2>Analytics &amp; User Feedback</h2>
-
-                <p>For tracking traffic and other stats I'm just using the ol' plain <a href="">Google Analytics</a>.</p>
-
-                <p>For tracking user bahavior and gathering feedback I'm using <a href="">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
-
-                <p>On Enboard click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
-
-
-                <hr>
-
-
-
-
-                <h2>Things That Should've Been</h2>
-
-                <p>Enboard obviously lacks some things. There's no proper landing page, no sitewide search, no profile pages and editing large boards needs some performance improvements.</p>
-
-                <p>I might implement them in future but right now I've had to stop working on Enboard and to focus on other things that are going in my life and on other projects.</p>
-
-
-                <hr>
-
-
-                <h2>Co-Founding</h2>
-
-                <p>If you are a business guy, marketing guy, front-end developer or Django developer &mdash; or even mix of those &mdash; and you would like to work on Enboard as a co-founder then please contact me.</p>
-
-
-
-                <hr>
-
-
-
-                <h2>Resources</h2>
-
-                <p>Enboard couldn't be made single-handedly in such a short span amount of time without articles, libraries, tools and services listed below.</p>
-
-
-
-
-                <h3>Articles</h3>
-                <ul>
-                    <li><a href="https://www.filamentgroup.com/lab/font-events.html">Font Loading Revisited with Font Events</a> by filament group</li>
-                    <li><a href="http://adambeagle.com/blog/deploying-django-17-ubuntu/">Deploying Django 1.7 on Ubuntu with DigitalOcean</a> by Adam Beagle</li>
-                </ul>
-
-
-
-                <h3>Design</h3>
-                <ul>
-                    <li><a href="">Roboto</a></li>
-                    <li><a href="">entypo+</a></li>
-                </ul>
-
-
-                <h3>Front-End</h3>
-                <ul>
-                    <li><a href="">Gulp</a></li>
-                    <li><a href="">Sass</a></li>
-                    <li><a href="">Autoprefixer</a></li>
-                    <li><a href="">jQuery</a> + <a href="">jQuery UI</a></li>
-                    <li><a href="https://github.com/bramstein/fontfaceobserver">Font Observer</a></li>
-                </ul>
-
-
-
-
-                <h3>Back-End</h3>
-                <ul>
-                    <li><a href="">Nginx</a></li>
-                    <li><a href="">Gunicorn</a></li>
-                    <li><a href="">Python</a></li>
-                    <li><a href="">Django</a></li>
-                    <li><a href="">django-allauth</a></li>
-                </ul>
-
-
-
-
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="">Linode</a></li>
-                    <li><a href="">BitBucket</a></li>
-                    <li><a href="">CloudFlare</a></li>
-                    <li><a href="">SendGrid</a></li>
-                    <li><a href="">Google Analytics</a></li>
-                    <li><a href="">HotJar</a></li>
-                    <li><a href="">Google Fonts</a></li>
-                </ul>
-
-
-
-
-                <h3>Tools</h3>
-                <ul>
-                    <li><a href="">Photoshop</a></li>
-                    <li><a href="">Fontastic</a></li>
-                    <li><a href="">Real Favicon Generator</a></li>
-                    <li><a href="">TinyPNG</a></li>
-                    <li><a href="">PuTTY</a></li>
-                    <li><a href="">WinSCP</a></li>
-                <ul>
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-            <div class="author">
-                <div class="author__wrapper">
-
-                    <div class="author__image">
-                        <img src="https://pbs.twimg.com/profile_images/648220964853977089/HBaHWSKw.png" alt="">
-                    </div>
-
-                    <div class="author__heading">
-
-                        <a href="/" class="author__title">Dominik Serafin</a>
-
-                        <a href="/" class="author__desc">Product designer, front-end engineer and Django developer.</a>
-
-                        <div class="author__social-networks">
-
-                            <a href="https://twitter.com/SerafinDominik" class="author__social social-twitter" target="_blank"
-                            title="I don't Tweet often, but when I do I try to keep things interesting as I can.">&nbsp;</a>
-
-                            <a href="https://dribbble.com/DominikSerafin" class="author__social social-dribbble" target="_blank"
-                            title="This is where I upload sneak peaks of things I'm working on.">&nbsp;</a>
-
-                            <a href="https://www.behance.net/dominikserafin" class="author__social social-behance" target="_blank"
-                            title="Here I upload complete projects showcases.">&nbsp;</a>
-
-                            <a href="https://github.com/DominikSerafin/" class="author__social social-github" target="_blank"
-                            title="I don't use GitHub that much, but... &#9835; I try (And he tries). Oh my god do I try... I try all the time, in this institution... &#9835;">&nbsp;</a>
-
-                            <a href="https://angel.co/DominikSerafin" class="author__social social-angellist" target="_blank"
-                            title="You may find more information about me here.">&nbsp;</a>
-
-                            <a href="https://linkedin.com/pub/dominik-serafin/a1/672/93b" class="author__social social-linkedin-1" target="_blank"
-                            title="I don't use it that often, but it doesn't hurt to have it.">&nbsp;</a>
-
-                            <!--<a href="" class="header__social social-medium" title="@SerafinDominik">&nbsp;</a>-->
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-            </div>
-
-
-
-
-            <div id="disqus_thead_container">
-                <div id="disqus_thread"></div>
-                <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    /*
-                    var disqus_config = function () {
-                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
-                    */
-                    (function() {  // DON'T EDIT BELOW THIS LINE
-                        var d = document, s = d.createElement('script');
-
-                        s.src = '//dominikserafin.disqus.com/embed.js';
-
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </div>
-
-
-
-        </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <footer class="footer">
-            <p>This isn't the state-of-the-art design because I've more interesting projects in works than my personal website.</p>
-            <p>Cookies are used here. Dominik Serafin &copy; 2015. All Rights Reserved.</p>
-        </footer>
-
-
-
-    <!-- end of body-smooth-state -->
-    </div>
 
 
 

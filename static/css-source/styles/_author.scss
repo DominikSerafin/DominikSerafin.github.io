@@ -16,7 +16,8 @@
 
 
     .author__image {
-        width: 180px;
+        display: block;
+        max-width: 180px;
         height: 180px;
         border-radius: 200px;
         float: left;
@@ -25,7 +26,8 @@
 
     .author__heading {
         float: left;
-        width: 400px;
+        display: block;
+        max-width: 400px;
         margin-top: 15px;
         margin-left: 50px;
     }
@@ -134,3 +136,30 @@
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+
+    .author {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+
+        .author__image {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    .author__heading {
+        margin-left: 0px;
+    }
+
+
+
+}
+
+
+

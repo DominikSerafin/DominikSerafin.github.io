@@ -3,15 +3,19 @@
 \*------------------------------------*/
 
 :root {
-    font-family: "Roboto", "Helvetica", "Arial", "Tahoma", "Trebuchet MS", sans-serif;
+    font-family: "Helvetica", "Arial", "Tahoma", "Trebuchet MS", sans-serif;
     font-variant-ligatures: no-common-ligatures;
     line-height: 1.4;
     font-size: 0;
     color: rgba(black,.9);
     min-height: 100%;
-    //letter-spacing: .2px;
+    letter-spacing: .5px;
     background-color: rgb(253,253,253);
     position: static;
 
     overflow-y: scroll;
+}
+
+.font-loaded {
+    font-family: "Roboto", "Helvetica", "Arial", "Tahoma", "Trebuchet MS", sans-serif;
 }

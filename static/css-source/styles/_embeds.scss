@@ -28,3 +28,14 @@
     media-queries
 \*------------------------------------*/
 
+
+@media screen and (max-width: 1000px) {
+
+    #disqus_thead_container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+

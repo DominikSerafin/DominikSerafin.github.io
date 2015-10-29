@@ -79,10 +79,11 @@
         font-size: 50px;
         margin: 100px 0 25px 0;
         line-height: 1.2;
+        font-weight: 700;
     }
 
     h2 {
-        font-size: 34px;
+        font-size: 36px;
         margin: 180px 0 25px 0;
     }
 
@@ -165,7 +166,7 @@
 
         //font-family: "Work Sans", sans-serif;
         font-size: 20px;
-        line-height: 1.45;
+        line-height: 1.5;
         color: rgb(100,100,100);
         margin: 25px 0 25px 0;
 
@@ -357,6 +358,9 @@
 \*------------------------------------*/
 @media screen and (max-width: 1000px) {
 
+
+
+
     .blog__normal-flow {
         padding: 0 20px;
     }
@@ -367,6 +371,16 @@
     }
 
 
+
+    .blog__content {
+
+
+        hr {
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+    }
 
 }
 

@@ -2,7 +2,6 @@
     block:
 \*------------------------------------*/
 .header {
-    display: block;
     margin: 0 auto;
     padding: 30px 50px 25px 50px;
 
@@ -175,5 +174,56 @@
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .header {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header__nav-link {
+        margin-top: 10px;
+    }
+
+    .header__nav-link--created::after {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header__title {
+        display: block;
+    }
+
+    .header__social-networks {
+        margin-left: 0;
+    }
+
+    .header__social {
+        margin-left: 0;
+        margin-right: 5px;
+    }
+
+    .header__nav {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .header__nav-title {
+        display: block;
+        margin-left: 0;
+    }
+
+    .header__nav-link {
+        display: block;
+        margin-left: 0;
+    }
+
+}
 
 
