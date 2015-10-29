@@ -16,7 +16,7 @@
     }
 
     a {
-        @include cool-underline(gray, gray, white, 95%);
+        @include cool-underline(gray, gray, $clr-gray-bg, 95%);
         font-weight: 400;
     }
 
