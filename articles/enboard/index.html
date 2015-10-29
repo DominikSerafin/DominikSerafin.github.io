@@ -163,10 +163,7 @@
 
             </header>
 
-
             <hr>
-
-
 
         </div>
         <div class="blog__widescreen-flow">
@@ -185,15 +182,13 @@
 
             <h2>History and Idea</h2>
 
-            <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with a browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like <a href="http://enboard.co/webdesign/" target="_blank">Delicious</a> etc. but unfortunately nothing cut it for me.</p>
+            <p>After I've started my web design adventure I have amassed a big number of related bookmarks with articles, fonts, services, etc. Organizing everything and accessing it with a browser default bookmarks manager was getting really tiring so I've looked into some bookmark managing services like Delicious etc. but unfortunately nothing cut it for me.</p>
 
-            <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn" target="_blank">exists</a>, btw.</aside>
+            <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn">exists</a>, btw.</aside>
 
-            <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. I've named it DopeLists.com and at the beginning it was only about <a href="http://enboard.co/webdesign/" target="_blank">web design</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/" target="_blank">front-end</a>, <a href="http://enboard.co/afterformat/" target="_blank">after format</a> and <a href="http://enboard.co/usefulwebsites/" target="_blank">general websites</a>.</p>
+            <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. It was named DopeLists.com and at the beginning it only consisted of <a href="http://enboard.co/webdesign/">web design links</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/">front-end</a>, <a href="http://enboard.co/afterformat/">after format</a> and <a href="http://enboard.co/usefulwebsites/">general websites</a>.</p>
 
-            <aside>Don't ask me why I've changed name so often. I don't remember it myself.</aside>
-
-            <p>I've later redesigned and refactored it a bit, because of bad markup decisions and time-wasting way of adding new links. Name was also changed (again) to Beaqn.in.</p>
+            <p>I've later redesigned and refactored it a bit because of bad markup decisions and time-wasting way of adding new links. Name was also changed to Beaqn.in.</p>
 
             <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions.</p>
 
@@ -235,20 +230,15 @@
 
 
 
-            <h2>Board Design &amp; Features</h2>
+            <h2>Board UX</h2>
 
 
 
-            <h3>URL Design</h3>
+            <h3>Convincing to Sign Up</h3>
 
-            <img src="urls.png" alt="">
+            <p>To convince users who haven't already registered I've included a <abbr title="Call To Action">CTA</abbr> button in top bar. It lets them know that they can also create such board for free.</p>
 
-            <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
-
-            <p>Every new board comes with a 6-character long unique alphanumeric string. The owners can add another custom slug which is not taken by another board and not used by other restricted Enboard URLs.</p>
-
-            <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
-
+            <p>Other method is the faux follow button. It acts as a information that boards can be followed. When clicked by unregisted users it opens a sign-up modal and for registered users it works like you think it works.</p>
 
 
             <h3>Header</h3>
@@ -292,6 +282,17 @@
 
 
 
+            <h3>URL Design</h3>
+
+            <img src="urls.png" alt="">
+
+            <p>Boards are using top level directory after domain name because I wanted them to be memorable and easily accessible.
+
+            <p>Every new board comes with a 6-character long unique alphanumeric string. The owners can add another custom slug which is not taken by another board and not used by other restricted Enboard URLs.</p>
+
+            <p>That way board creation is faster and people who don't need specific board aliases (e.g. in private boards) aren't forced to take names that could be used by other users.</p>
+
+
 
 
 
@@ -322,7 +323,7 @@
 
             <p>All the application code, static files and PostgreSQL databases are hosted on a Ubuntu 14.04 <a href="https://www.linode.com/">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
 
-            <p>For web server I've chosen Nginx because it was easier to configure and from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes &mdash; first is a proxy to a Gunicorn which executes Enboard application and second is a server for static files.</p>
+            <p>For web server I've chosen Nginx because it was easier to configure, from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes. First is a proxy to a Gunicorn which executes Enboard application. Second is a server for static files.</p>
 
             <p><a href="http://upstart.ubuntu.com/">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
 
@@ -333,7 +334,9 @@
 
             <h3>Deployment</h3>
 
-            <p>I was working on Enboard all by myself and I wanted to have fast deployment flow since I knew I'll reiterate and update Enboard couple times a week so I didn't used any deployment tools. Instead I've opted for a simple GIT deployment, where I push local changes to <a href="">BitBucket</a> repository and pull them from Linode server.</p>
+            <aside>Instead GitHub I've used BitBucket because it has a free plan with unlimited private repositories.</aside>
+
+            <p>I was working on Enboard all by myself and I wanted to have fast deployment time since I knew I'll reiterate and update it couple times a week. I've opted for a simple GIT deployment where I push local changes to <a href="https://bitbucket.org/">BitBucket</a> repository and pull them from Linode server.</p>
 
             <p><strong>My usual deployment flow looked like this:</strong></p>
 
@@ -342,9 +345,9 @@
                 <li>Change static files versions using GET <code>?v=</code> parameter at the end of links to files so that end users will get fresh styles and scripts.</li>
                 <li><code>git push</code> from local development set-up.</li>
                 <li><code>git pull</code> inside server.</li>
-                <li>Database migration &mdash; if necessary.</li>
-                <li>Static files collect.</li>
-                <li>CloudFlare cache clear.</li>
+                <li>Database migration (optional).</li>
+                <li>Static files collect (optional).</li>
+                <li>CloudFlare cache clear (optional).</li>
                 <li>Application restart.</li>
             </ol>
 
@@ -355,11 +358,13 @@
 
             <aside>I just love that you can write normal CSS and it will also be a valid Sass.</aside>
 
-            <p>My CSS preprocessor of choice is <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Thanks to its import feature it let me to have modular CSS structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
+            <p>My CSS preprocessor of choice is the <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Its import feature let me to have modular stylesheets structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
 
             <p>In addition I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
 
-            <p>All the CSS and JavaScript is built using Gulp.</p>
+            <aside>For me main advantage of Gulp over <a href="http://gruntjs.com/">Grunt</a> is faster build time.</aside>
+
+            <p>All the CSS and JavaScript are watched, built and minified using <a href="http://gulpjs.com/">Gulp</a>.</p>
 
 
 
@@ -367,13 +372,13 @@
 
             <img src="themes.png" alt="">
 
-            <p>Every board can be customized with 25 themes. Themes only change board headers, items icons and items description background.</p>
-
             <aside>
                 Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
             </aside>
 
-            <p>They are implemented with the help of Sass mixin and icon fonts features. This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
+            <p>Every board can be customized with 25 themes. They are implemented with the help of Sass mixin and icon fonts features.</p>
+
+            <p>This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
 
 
             <hr>
@@ -384,7 +389,7 @@
             <h2>Performance Optimizations</h2>
 
 
-            <p>From the beginning I've wanted to make Enboard very fast. I've implemented couple of techniques that improved normal and perceived load times.</p>
+            <p>From the beginning I've wanted to make Enboard very fast. I've implemented couple of techniques that improved real and perceived load times.</p>
 
 
         </div>
@@ -443,9 +448,9 @@
 
             <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="">HotJar</a> which require those.</aside>
 
-            <p>To miminize page load speeds, especially on smartphones I've decided to not use any external sharing widgets since they are really big performance hogs with their bloated scripts and iframes.</p>
+            <p>To miminize page load speeds, especially on smartphones I didn't used any external sharing widgets. They are really big performance hogs with their bloated scripts and iframes.</p>
 
-            <p>I've gone with more lightweight solution. I've used custom sharing buttons that open sharing dialog with "sharer" urls in new popup window.</p>
+            <p>I've gone with more lightweight solution. Custom sharing buttons that open social networks default sharing dialog.</p>
 
             <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
 
@@ -483,7 +488,7 @@
 
             <h2>Co-Founding</h2>
 
-            <p>If you are a business guy, marketing guy, front-end developer or Django developer &mdash; or even mix of those &mdash; and you would like to work on Enboard as a co-founder then please contact me.</p>
+            <p>If you are a business guy, marketing guy, front-end developer, Django developer or even mix of those and you would like to work on Enboard as a co-founder then please contact me.</p>
 
 
 

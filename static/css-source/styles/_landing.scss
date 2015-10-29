@@ -3,10 +3,8 @@
 \*------------------------------------*/
 
 .landing {
-    max-width: 1200px;
-
-    margin: 50px auto 120px auto;
-    padding: 0 50px;
+    background-color: rgb(250,250,250);
+    overflow: auto;
 
 
     p {
@@ -23,6 +21,13 @@
     }
 
 
+}
+
+.landing__wrapper {
+    max-width: 1200px;
+
+    margin: 50px auto 120px auto;
+    padding: 0 50px;
 }
 
 
