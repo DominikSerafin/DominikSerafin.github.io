@@ -11,7 +11,7 @@
     <!-- Site informations -->
     <title>How I've created Enboard &mdash; a case study</title>
     <meta name="author" content="Dominik Serafin">
-    <meta name="description" content="If you want to know how to create application such as <a href="">Enboard</a> or you're interested in my workflow then you should read this.">
+    <meta name="description" content="If you want to know how to create application such as Enboard or you're interested in my workflow then you should read this.">
 
     <!-- Open Graph -->
     <!--
@@ -360,7 +360,7 @@
 
             <p>My CSS preprocessor of choice is the <a href="http://sass-lang.com/"><abbr title="Syntactically Awesome Style Sheets">Sass</abbr></a>. Its import feature let me to have modular stylesheets structure based on <a href="https://en.bem.info/method/naming-convention/"><abbr title="Block, Element, Modifier">BEM</abbr> methodology</a> and loosely on <a href="https://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a>. Sass other features like mixins, variables and logic operators also came in handy.</p>
 
-            <p>In addition I've used <a href="">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
+            <p>In addition I've used <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
 
             <aside>For me main advantage of Gulp over <a href="http://gruntjs.com/">Grunt</a> is faster build time.</aside>
 
@@ -433,20 +433,20 @@
 
             <h3>Making Fonts Lazy &amp; Using Icon Fonts</h3>
 
-            <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font only after it's loaded.</p>
+            <p>To fight something called FOIT (flash of invisible text) I've plugged in a neat script called <a href="https://github.com/bramstein/fontfaceobserver">Font Observer</a> that &mdash; as the name suggests &mdash; is observing font load requests and returns callbacks that make possible to apply custom font only after it's loaded.</p>
 
             <p>Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
 
             <p>While we are speaking about fonts, we may also speak about icon fonts.</p>
 
-            <aside>For generating icon fonts I've used <a href="">Fontastic</a>.</aside>
+            <aside>For generating icon fonts I've used <a href="http://fontastic.me/">Fontastic</a>.</aside>
 
-            <p>I've used selected <a href="">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
+            <p>I've used selected <a href="http://www.entypo.com/">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
 
 
             <h3>Reducing Network Requests with Share Buttons</h3>
 
-            <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="">HotJar</a> which require those.</aside>
+            <aside>I didn't succeeded in completely eliminating 3rd party scripts because I'm using Google Analytics and <a href="https://www.hotjar.com/r/r4c63">HotJar</a> which require these.</aside>
 
             <p>To miminize page load speeds, especially on smartphones I didn't used any external sharing widgets. They are really big performance hogs with their bloated scripts and iframes.</p>
 
@@ -464,9 +464,9 @@
 
             <h2>Analytics &amp; User Feedback</h2>
 
-            <p>For tracking traffic and other stats I'm just using the ol' plain <a href="">Google Analytics</a>.</p>
+            <p>For tracking traffic and other stats I'm just using the ol' plain <a href="https://www.google.com/analytics/">Google Analytics</a>.</p>
 
-            <p>For tracking user bahavior and gathering feedback I'm using <a href="">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
+            <p>For tracking user bahavior and gathering feedback I'm using <a href="https://www.hotjar.com/r/r4c63">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
 
             <p>On Enboard click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
 
@@ -513,17 +513,17 @@
 
             <h3>Design</h3>
             <ul>
-                <li><a href="">Roboto</a></li>
-                <li><a href="">entypo+</a></li>
+                <li><a href="https://www.google.com/fonts/specimen/Roboto">Roboto</a></li>
+                <li><a href="http://www.entypo.com/">entypo+</a></li>
             </ul>
 
 
             <h3>Front-End</h3>
             <ul>
-                <li><a href="">Gulp</a></li>
-                <li><a href="">Sass</a></li>
-                <li><a href="">Autoprefixer</a></li>
-                <li><a href="">jQuery</a> + <a href="">jQuery UI</a></li>
+                <li><a href="http://gulpjs.com/">Gulp</a></li>
+                <li><a href="http://sass-lang.com/">Sass</a></li>
+                <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
+                <li><a href="https://jquery.com/">jQuery</a> + <a href="http://jqueryui.com/">jQuery UI</a></li>
                 <li><a href="https://github.com/bramstein/fontfaceobserver">Font Observer</a></li>
             </ul>
 
@@ -532,11 +532,11 @@
 
             <h3>Back-End</h3>
             <ul>
-                <li><a href="">Nginx</a></li>
-                <li><a href="">Gunicorn</a></li>
-                <li><a href="">Python</a></li>
-                <li><a href="">Django</a></li>
-                <li><a href="">django-allauth</a></li>
+                <li><a href="http://nginx.org/">Nginx</a></li>
+                <li><a href="http://gunicorn.org/">Gunicorn</a></li>
+                <li><a href="https://www.python.org/">Python</a></li>
+                <li><a href="https://www.djangoproject.com/">Django</a></li>
+                <li><a href="http://www.intenct.nl/projects/django-allauth/">django-allauth</a></li>
             </ul>
 
 
@@ -544,13 +544,13 @@
 
             <h3>Services</h3>
             <ul>
-                <li><a href="">Linode</a></li>
-                <li><a href="">BitBucket</a></li>
-                <li><a href="">CloudFlare</a></li>
-                <li><a href="">SendGrid</a></li>
-                <li><a href="">Google Analytics</a></li>
-                <li><a href="">HotJar</a></li>
-                <li><a href="">Google Fonts</a></li>
+                <li><a href="https://www.linode.com/">Linode</a></li>
+                <li><a href="https://bitbucket.org/">BitBucket</a></li>
+                <li><a href="https://www.cloudflare.com/">CloudFlare</a></li>
+                <li><a href="https://sendgrid.com/">SendGrid</a></li>
+                <li><a href="https://www.google.com/analytics/">Google Analytics</a></li>
+                <li><a href="https://www.hotjar.com/r/r4c63">HotJar</a></li>
+                <li><a href="https://www.google.com/fonts/">Google Fonts</a></li>
             </ul>
 
 
@@ -558,12 +558,12 @@
 
             <h3>Tools</h3>
             <ul>
-                <li><a href="">Photoshop</a></li>
-                <li><a href="">Fontastic</a></li>
-                <li><a href="">Real Favicon Generator</a></li>
-                <li><a href="">TinyPNG</a></li>
-                <li><a href="">PuTTY</a></li>
-                <li><a href="">WinSCP</a></li>
+                <li><a href="http://www.photoshop.com/products/photoshop">Photoshop</a></li>
+                <li><a href="http://fontastic.me/">Fontastic</a></li>
+                <li><a href="http://realfavicongenerator.net/">Real Favicon Generator</a></li>
+                <li><a href="https://tinypng.com/">TinyPNG</a></li>
+                <li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a></li>
+                <li><a href="https://winscp.net/">WinSCP</a></li>
             <ul>
 
 
