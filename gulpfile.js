@@ -8,17 +8,12 @@
 \*------------------------------------*/
 
 var gulp          = require('gulp');
-var source        = require('vinyl-source-stream');
-var buffer        = require('vinyl-buffer');
-var watchify      = require('watchify');
-var assign        = require('lodash.assign');
-var browserify    = require('browserify');
 var browserSync   = require('browser-sync');
-var gutil         = require('gulp-util');
 var notify        = require('gulp-notify');
 var plumber       = require('gulp-plumber');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
+var concat        = require('gulp-concat');
 var uglify        = require('gulp-uglify');
 var sourcemaps    = require('gulp-sourcemaps');
 
@@ -33,8 +28,8 @@ var sourcemaps    = require('gulp-sourcemaps');
 
   configuration _____ config variables for tasks
 
-  jsbuild ___________ browserify and uglify script
   cssbuild __________ sass, autoprefixer and browsersync css inject
+  jsbuild ___________
 
   server ____________ runs browsersync server
   reload ____________ (helper task) reload
@@ -62,11 +57,23 @@ var serverconfig = {
   notify: false
 };
 
+
+
+var jsdepssource = './static/js-source/deps/';
 var js = {
-  src: ['./static/js-source/index.js'],
   dest: './static/js',
-  name: 'bundle.js'
+  name: 'global.js',
+
+  files: [
+    jsdepssource + 'jquery-2.1.4.min.js',
+    jsdepssource + 'packery.pkgd.min.js',
+    './static/js-source/global.js'
+  ]
+
 };
+
+
+
 
 var css = {
   base: './static/css-source',
@@ -101,37 +108,6 @@ var autoprefixerconfig = {
 
 
 
-/*------------------------------------*\
-  jsbuild
-\*------------------------------------*/
-
-// add custom browserify options here
-var customOpts = {
-  entries: js.src,
-  debug: true
-};
-var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
-
-// add transformations here
-// i.e. b.transform(coffeeify);
-
-gulp.task('jsbuild', bundle); // so you can run `gulp js` to build the file
-b.on('update', bundle); // on any dep update, runs the bundler
-b.on('log', gutil.log); // output build logs to terminal
-
-function bundle() {
-  return b.bundle()
-    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-    .pipe(source(js.name))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(js.dest));
-}
-
-
 
 /*------------------------------------*\
   cssbuild
@@ -159,6 +135,28 @@ gulp.task('cssbuild', function() {
 
 });
 
+/*------------------------------------*\
+  js build
+\*------------------------------------*/
+
+//jsbuild
+gulp.task('jsbuild', function() {
+  return gulp.src(js.files)
+
+  //plumber
+  .pipe(plumber({errorHandler: function(error) {
+    notify.onError({
+      title:    'build failed',
+      message:  'jsbuild: <%= error.message %>'
+    })(error);
+    this.emit('end');
+  }}))
+
+  .pipe(concat(js.name))
+  .pipe(uglify())
+  .pipe(gulp.dest(js.dest));
+});
+
 
 /*------------------------------------*\
   server
@@ -184,6 +182,7 @@ gulp.task('watch', function() {
   gulp.watch('static/js-source/**/*.js',     ['jsbuild']);
 
   gulp.watch('static/css/global.css',        ['reload']);
+  gulp.watch('static/js/global.js',          ['reload']);
 
 });
 
