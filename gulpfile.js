@@ -67,6 +67,7 @@ var js = {
   files: [
     jsdepssource + 'jquery-2.1.4.min.js',
     jsdepssource + 'packery.pkgd.min.js',
+    jsdepssource + 'prism.js',
     './static/js-source/global.js'
   ]
 

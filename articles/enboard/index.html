@@ -184,9 +184,9 @@
 
             <aside>Original repo with all the commits still <a href="https://github.com/DominikSerafin/beaqn">exists</a>, btw.</aside>
 
-            <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. It was named DopeLists.com and at the beginning it only consisted of <a href="http://enboard.co/webdesign/">web design links</a>. Later on I've added other sections like <a href="http://enboard.co/frontend/">front-end</a>, <a href="http://enboard.co/afterformat/">after format</a> and <a href="http://enboard.co/usefulwebsites/">general websites</a>.</p>
+            <p>That's when I've got an idea to create a simple static page hosted on GitHub where I could keep all my bookmarks organized through categories in a way I liked to. It was named DopeLists.com and at the beginning it only consisted of <a href="http://enboard.co/webdesign/">web design links</a>. Further down the road I've added other sections like <a href="http://enboard.co/frontend/">front-end</a>, <a href="http://enboard.co/afterformat/">after format</a> and <a href="http://enboard.co/usefulwebsites/">general websites</a>.</p>
 
-            <p>I've later redesigned and refactored it a bit because of bad markup decisions and time-wasting way of adding new links. Name was also changed to Beaqn.in.</p>
+            <p>A couple months later I've redesigned and refactored it a bit because of bad markup decisions and time-wasting way of adding new links. Name was also changed to Beaqn.in.</p>
 
             <p>The website got a bit popular, shared many times and received good amount of e-mails with positive feedback and suggestions.</p>
 
@@ -211,21 +211,6 @@
         <div class="blog__normal-flow">
 
 
-            <!--
-            <h2>Structure</h2>
-
-            <p>It's nothing complex really. Enboard basically consists of user dashboard, boards and collections of boards.</p>
-
-
-            <h3>Dashboard</h3>
-
-            <p>Dashboard is split into two pieces. First one is for logged users where they can see their own boards, boards that they follow and "Discover" tab with boards collections on specific subjects.</p>
-
-            <p>Second one is a view for users without account. It consists of mentioned earlier "Discover" tab and mini landing page with registration form.</p>
-
-            -->
-
-
 
 
             <h2>Board UX</h2>
@@ -236,7 +221,7 @@
 
             <p>To convince users who haven't already registered I've included a <abbr title="Call To Action">CTA</abbr> button in top bar. It lets them know that they can also create such board for free.</p>
 
-            <p>Other method is the faux follow button. It acts as a information that boards can be followed. When clicked by unregisted users it opens a sign-up modal and for registered users it works like you think it works.</p>
+            <p>Other method is the faux follow button. It acts as a information that boards can be followed. When clicked by registered users it works normally, but when clicked by unregistered users it opens a sign-up modal.</p>
 
 
             <h3>Header</h3>
@@ -276,7 +261,7 @@
 
             <p>Items addition, modification or deletion gets logged in the changelog that can be seen by anyone with board access.</p>
 
-            <p>Different types of actions have different icons and are color coded for quicker scanning. Useful when there's lots of them.</p>
+            <p>Different types of actions have different icons and are color coded for quicker visual scanning. Useful when there's lots of them.</p>
 
 
 
@@ -321,7 +306,7 @@
 
             <p>All the application code, static files and PostgreSQL databases are hosted on a Ubuntu 14.04 <a href="https://www.linode.com/">Linode</a> <abbr title="Virtual Private Server">VPS</abbr>.</p>
 
-            <p>For web server I've chosen Nginx because it was easier to configure, from my research it was better suited for Django applications and overall more faster than Apache. It serves two purposes. First is a proxy to a Gunicorn which executes Enboard application. Second is a server for static files.</p>
+            <p>For web server I've chosen Nginx because it was easier to configure, better suited for Django applications and overall more faster than Apache (basing on my research). It serves two purposes. First is a proxy to a Gunicorn which executes Enboard application. Second is a server for static files.</p>
 
             <p><a href="http://upstart.ubuntu.com/">Upstart</a> is automatically stopping or starting Enboard application on system events like boot-ups or crashes.</p>
 
@@ -334,13 +319,13 @@
 
             <aside>Instead GitHub I've used BitBucket because it has a free plan with unlimited private repositories.</aside>
 
-            <p>I was working on Enboard all by myself and I wanted to have fast deployment time since I knew I'll reiterate and update it couple times a week. I've opted for a simple GIT deployment where I push local changes to <a href="https://bitbucket.org/">BitBucket</a> repository and pull them from Linode server.</p>
+            <p>I was working on Enboard all by myself and I wanted to have fast deployment times since I knew I'll reiterate and update it a couple times a week. I've opted for a simple GIT deployment where I push local changes to <a href="https://bitbucket.org/">BitBucket</a> repository and pull them from Linode server.</p>
 
             <p><strong>My usual deployment flow looked like this:</strong></p>
 
             <ol>
                 <li>Update code and merge GIT branches.</li>
-                <li>Change static files versions using GET <code>?v=</code> parameter at the end of links to files so that end users will get fresh styles and scripts.</li>
+                <li>Change static files versions using GET <code>?v=</code> parameter at the end of files links so that returning users will get fresh styles and scripts.</li>
                 <li><code>git push</code> from local development set-up.</li>
                 <li><code>git pull</code> inside server.</li>
                 <li>Database migration (optional).</li>
@@ -360,7 +345,7 @@
 
             <p>In addition I've used <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> postprocessor &mdash; that way I didn't have to worry about manually adding browser vendor prefixes like <code>-webkit-</code> or <code>-ms-</code>.</p>
 
-            <aside>For me main advantage of Gulp over <a href="http://gruntjs.com/">Grunt</a> is faster build time.</aside>
+            <aside>For me main advantage of Gulp over <a href="http://gruntjs.com/">Grunt</a> are faster build times.</aside>
 
             <p>All the CSS and JavaScript are watched, built and minified using <a href="http://gulpjs.com/">Gulp</a>.</p>
 
@@ -371,13 +356,12 @@
             <img src="themes.png" alt="">
 
             <aside>
-                Icon fonts are really useful. They are vector based so you can easily change their size, color and some other properties.
+                Icon fonts are really useful. They are vector based so their size, color and some other properties are easily changeable.
             </aside>
 
             <p>Every board can be customized with 25 themes. They are implemented with the help of Sass mixin and icon fonts features.</p>
 
             <p>This lets me to quckly add new themes and easily change whole board theme using only one class in <code>&lt;html&gt;</code> that overwrites colors of specified elements.</p>
-
 
             <hr>
 
@@ -435,11 +419,9 @@
 
             <p>Really useful, especially on smartphones where font loads aren't that snappy like on desktops.</p>
 
-            <p>While we are speaking about fonts, we may also speak about icon fonts.</p>
-
             <aside>For generating icon fonts I've used <a href="http://fontastic.me/">Fontastic</a>.</aside>
 
-            <p>I've used selected <a href="http://www.entypo.com/">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons. Because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
+            <p>While we are speaking about fonts, we may also speak about icon fonts. I've used selected <a href="http://www.entypo.com/">entypo+ icons</a> packaged as a font. This resulted in the only one ~13kb request for all of the icons and because they are vector based, they look crisp on high-density displays and also let me to easily customize their color and other properties.</p>
 
 
             <h3>Reducing Network Requests with Share Buttons</h3>
@@ -449,8 +431,6 @@
             <p>To miminize page load speeds, especially on smartphones I didn't used any external sharing widgets. They are really big performance hogs with their bloated scripts and iframes.</p>
 
             <p>I've gone with more lightweight solution. Custom sharing buttons that open social networks default sharing dialog.</p>
-
-            <pre><code>https://twitter.com/share?url=http://enboard.co/frontend/&amp;text=Front%20End%20Resources&amp;via=enboardco</code></pre>
 
             <aside>E.g. I don't count reddit upvotes as shares.</aside>
 
@@ -466,7 +446,7 @@
 
             <p>For tracking user bahavior and gathering feedback I'm using <a href="https://www.hotjar.com/r/r4c63">HotJar</a>. It's a really useful tool that I could describe as a "swiss knife" of analytics.</p>
 
-            <p>On Enboard click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
+            <p>On Enboard; click heatmaps and screen recordings were used to detect and solve usabilty issues along with polls and surveys to gather feedback.</p>
 
 
             <hr>
@@ -680,7 +660,7 @@
 
 
     <!-- Scripts postload -->
-    <script src="static/js/global.js" type="text/javascript"></script>
+    <script src="../../static/js/global.js" type="text/javascript"></script>
 
     <!-- Google Analytics -->
     <script>
