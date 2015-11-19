@@ -77,6 +77,16 @@
     }
 
 
+    .projects__single--border {
+        box-shadow: 0 0 0 1px rgba(black,.07);
+        img {
+            box-shadow: 0 0 0 1px rgba(black,.07);
+        }
+    }
+
+    .projects__single--border:hover {
+        box-shadow: none;
+    }
 
     .projects__caption {
         font-size: 21px;
