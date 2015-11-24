@@ -358,6 +358,35 @@
 /*------------------------------------*\
     media-queries
 \*------------------------------------*/
+
+@media screen and (max-width: 1300px) {
+    .blog__content {
+        aside {
+            left: -235px;
+            width: 200px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .blog__content {
+        aside {
+            left: -175px;
+            width: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .blog__content {
+        aside {
+            display: none;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1000px) {
 
 

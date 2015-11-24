@@ -80,7 +80,7 @@ var css = {
   base: './static/css-source',
   src: ['./static/css-source/global.scss'],
   dest: './static/css'
-}
+};
 
 var sassconfig = {
   outputStyle: 'compressed',
