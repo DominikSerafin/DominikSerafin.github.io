@@ -76,17 +76,31 @@
         width: 379px;
     }
 
+    .projects__single--full {
+        width: 100%;
+    }
 
-    .projects__single--border {
+
+    .projects__single--shadow-border {
         box-shadow: 0 0 0 1px rgba(black,.07);
         img {
             box-shadow: 0 0 0 1px rgba(black,.07);
         }
     }
 
-    .projects__single--border:hover {
+    .projects__single--shadow-border:hover {
         box-shadow: none;
     }
+
+
+    .projects__single--border {
+        img {
+            border: 1px solid rgba(black,.07);
+        }
+    }
+
+
+
 
     .projects__caption {
         font-size: 21px;
@@ -154,10 +168,12 @@
 
     .projects__single--large {
         width: auto;
+        display: block;
     }
 
     .projects__single--small {
         width: auto;
+        display: block;
     }
 
 
